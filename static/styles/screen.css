@@ -66,3 +66,154 @@ a img {
 article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
   display: block;
 }
+
+/* line 31, source/screen.scss */
+body {
+  background: #dddddd;
+  font-family: helvetica, arial;
+  font-size: 12px;
+  line-height: 15px;
+}
+
+/* line 38, source/screen.scss */
+a {
+  text-decoration: none;
+  color: #d92027;
+}
+
+/* line 43, source/screen.scss */
+#container {
+  margin: 0 auto;
+  width: 960px;
+}
+/* line 48, source/screen.scss */
+#container footer {
+  clear: both;
+}
+
+/* line 53, source/screen.scss */
+#left-container {
+  float: left;
+  display: inline;
+  width: 240px;
+}
+/* line 58, source/screen.scss */
+#left-container > header {
+  position: fixed;
+  width: 240px;
+  margin: 20px 0 50px;
+}
+/* line 64, source/screen.scss */
+#left-container > header hgroup h1 a {
+  display: block;
+  height: 162px;
+  text-indent: -119988px;
+  overflow: hidden;
+  text-align: left;
+  background-image: url('../images/logo.png?1350241666');
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+}
+/* line 69, source/screen.scss */
+#left-container > header hgroup h2 {
+  text-align: center;
+}
+
+/* line 76, source/screen.scss */
+#main {
+  margin-left: 240px;
+  width: 720px;
+}
+/* line 80, source/screen.scss */
+#main > header {
+  padding: 10px;
+  background: #eee;
+  margin: 0 0 10px;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.3) 5px 5px 10px;
+  -moz-box-shadow: rgba(0, 0, 0, 0.3) 5px 5px 10px;
+  box-shadow: rgba(0, 0, 0, 0.3) 5px 5px 10px;
+}
+/* line 86, source/screen.scss */
+#main .posts {
+  position: relative;
+  width: 740px;
+}
+/* line 90, source/screen.scss */
+#main .posts .post {
+  float: left;
+  width: 210px;
+  background: white;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  padding: 10px;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.3) 5px 5px 10px;
+  -moz-box-shadow: rgba(0, 0, 0, 0.3) 5px 5px 10px;
+  box-shadow: rgba(0, 0, 0, 0.3) 5px 5px 10px;
+}
+/* line 100, source/screen.scss */
+#main .posts .post.double {
+  width: 460px;
+}
+/* line 104, source/screen.scss */
+#main .posts .post.double .content .picture {
+  width: 480px;
+}
+/* line 106, source/screen.scss */
+#main .posts .post.double .content .picture img {
+  margin-top: -25%;
+}
+/* line 113, source/screen.scss */
+#main .posts .post.triple {
+  width: 690px;
+}
+/* line 117, source/screen.scss */
+#main .posts .post.triple .content .picture {
+  width: 710px;
+}
+/* line 119, source/screen.scss */
+#main .posts .post.triple .content .picture img {
+  margin-top: -25%;
+}
+/* line 129, source/screen.scss */
+#main .posts .post.double > header h1 a, #main .posts .post.triple > header h1 a {
+  font-size: 22px;
+  line-height: 50px;
+}
+/* line 136, source/screen.scss */
+#main .posts .post > header {
+  min-height: 60px;
+}
+/* line 139, source/screen.scss */
+#main .posts .post > header h1 a {
+  display: block;
+  font-size: 18px;
+  line-height: 22px;
+}
+/* line 147, source/screen.scss */
+#main .posts .post .content .picture {
+  display: block;
+  overflow: hidden;
+  max-height: 150px;
+  margin-left: -10px;
+  margin-bottom: 10px;
+  width: 230px;
+}
+/* line 155, source/screen.scss */
+#main .posts .post .content .picture img {
+  width: 100%;
+}
+/* line 159, source/screen.scss */
+#main .posts .post .content p {
+  text-align: justify;
+}
+/* line 164, source/screen.scss */
+#main .posts .post footer {
+  color: #888888;
+  font-size: 10px;
+  line-height: 12px;
+  text-align: right;
+}
+/* line 170, source/screen.scss */
+#main .posts .post footer address {
+  display: inline;
+}

@@ -1,13 +1,13 @@
 # Require any additional compass plugins here.
 
 # Set this to the root of your project when deployed:
+relative_assets = true
 http_path = "/"
 css_dir = "styles"
 sass_dir = "styles/source"
 images_dir = "images"
 javascripts_dir = "js"
 
-sass_options = {:cache_location => "{Compass.configuration.project_path}/styles/sass-cache"} 
 # You can select your preferred output style here (can be overridden via the command line):
 # output_style = :expanded or :nested or :compact or :compressed
 
