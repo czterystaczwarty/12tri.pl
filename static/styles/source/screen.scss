@@ -68,6 +68,11 @@ a {
 				text-align: center;
 			}
 		}
+		nav {
+			#pull {
+				display: none;
+			}
+		}
 	}
 
 	footer {
@@ -227,9 +232,31 @@ a {
 		margin-right: $post-gap/2;
 
 		> header {
-			position: static;
+			position: relative;
 			width: auto;
 			height: auto;
+			@include box-shadow(none);
+
+			nav {
+				ul {
+					display: none;
+				}
+
+				#pull {
+					padding: 0 10px;
+					display: block;
+					background: #f00 url(../images/menu.png) no-repeat 95% 50%;
+					color: #fff;
+					font-size: 15px;
+					font-weight: bold;
+					line-height: 45px;
+					outline: 0;
+
+					&:focus {
+						outline: 0;
+					}
+				}
+			}
 		}
 
 		#main {
