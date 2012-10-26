@@ -1,0 +1,88 @@
+@media screen and (max-width: 479px) {
+	/* Target portrait smartphones */
+
+	// darken bg for better contrast
+	body {
+		background: #777;
+	}
+
+	#container {
+		width: auto;
+		margin-left: $post-gap/2;
+		margin-right: $post-gap/2;
+
+		> header {
+			position: relative;
+			width: auto;
+			height: auto;
+			padding-bottom: 0;
+
+			hgroup {
+				h1 a {
+					margin-bottom: 5px;
+				}
+				h2 {
+					font-size: 120%;
+					line-height: 200%;
+					margin-bottom: 5px;
+				}
+			}
+
+			nav {
+				ul {
+					display: none;
+				}
+
+				#pull {
+					padding: 0 10px;
+					display: block;
+					background: #D92027 url(../images/menu.png) no-repeat 95% 50%;
+					color: #fff;
+					font-size: 15px;
+					font-weight: bold;
+					line-height: 45px;
+					outline: 0;
+					-webkit-tap-highlight-color: transparent;
+					-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+				}
+			}
+		}
+
+		#main {
+			margin-left: 0;
+			width: auto;
+
+			> header {
+				margin-right: 0;
+			}
+
+			.posts {
+				.post {
+					&,
+					&.double,
+					&.triple {
+						width: auto;
+						margin-right: 0;
+						@include box-shadow(rgba(0,0,0, 0.6) 0px 5px 7px);
+
+						header {
+
+							h1 a{
+								min-height: 20px;
+								font-size: 17px;
+								line-height: 20px;
+							}
+						}
+
+						.content {
+							.picture {
+								margin-right: -10px;
+								width: auto;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,18 @@
+$container-width: 960px;
+$bg-color: #ddd;
+
+$link-color: #d92027;
+
+$left-container-width: 240px;
+$left-container: #fff;
+
+$column-width: 240px;
+$columns: 3;
+$main-width: $column-width * $columns;
+
+$post-bg-color: #fff;
+$post-footer-color: #888;
+$post-gap: 10px;
+$post-padding: 10px;
+
+$minus: $post-gap + (2 * $post-padding);

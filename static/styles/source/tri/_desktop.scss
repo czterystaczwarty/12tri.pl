@@ -1,0 +1,168 @@
+html {
+	height: 100%;
+}
+
+body {
+	background: $bg-color;
+	font-family: helvetica, arial;
+	font-size: 13px;
+	line-height: 15px;
+}
+
+a {
+	text-decoration: none;
+	color: $link-color;
+}
+
+#container {
+	margin: 0 auto;
+	width: $container-width;
+
+	> header {
+		position: fixed;
+		width: $left-container-width - $post-gap;
+		height: 100%;
+		padding: 20px 0 50px;
+		background: #fff;
+		@include box-shadow(rgba(0,0,0, 0.3) 5px 5px 10px);
+
+		hgroup {
+			h1 a {
+				display: block;
+				height: 162px;
+				@include replace-text('logo.png');
+			}
+			h2 {
+				text-align: center;
+			}
+		}
+		nav {
+			ul {
+				display: block;
+			}
+			#pull {
+				display: none;
+			}
+		}
+	}
+
+	footer {
+		clear: both;
+	}
+}
+
+
+
+#main {
+	margin-left: $left-container-width;
+	width: $main-width;
+
+	> header {
+		padding: 10px;
+		background: #eee;
+		margin: 0 $post-gap $post-gap 0;
+		@include box-shadow(rgba(0,0,0, 0.3) 5px 5px 10px);
+	}
+	.posts {
+		position: relative;
+
+		.post {
+			position: relative;
+			width: $column-width - $minus;
+			background: $post-bg-color;
+			margin-right: $post-gap;
+			margin-bottom: $post-gap;
+			padding: $post-padding;
+			@include box-shadow(rgba(0,0,0, 0.3) 5px 5px 10px);
+
+			&.double {
+				width: $column-width * 2 - $minus;
+
+				.content {
+					.picture {
+						width: $column-width * 2 - $post-padding;
+						img {
+							margin-top: -25%;
+						}
+					}
+				}
+			}
+
+			&.triple {
+				width: ($column-width * 3) - $minus;
+
+				.content {
+					.picture {
+						width: $column-width * 3 - $post-padding;
+						img {
+							margin-top: -25%;
+						}
+					}
+				}
+			}
+
+			&.double,
+			&.triple {
+				> header {
+					h1 a {
+						font-size: 22px;
+						line-height: 50px;
+					}
+				}
+			}
+
+			> header {
+
+				h1 a{
+					display: block;
+					min-height: 40px;
+					margin-bottom: 10px;
+					font-size: 18px;
+					line-height: 22px;
+					text-transform: uppercase;
+				}
+			}
+
+			// &:before {
+			// 	content: '';
+			// 	display: block;
+			// 	position: absolute;
+			// 	top: 0;
+			// 	left: 0;
+			// 	border-width: 0 0 10px 15px;
+			// 	border-style: solid;
+			// 	border-color: transparent transparent transparent #f00;
+			// }
+
+			.content {
+				.picture {
+					display: block;
+					overflow: hidden;
+					max-height: 150px;
+					margin-left: -$post-padding;
+					margin-right: -$post-padding;
+					margin-bottom: $post-padding;
+					width: $column-width - $post-padding;
+
+					img {
+						width: 100%;
+					}
+				}
+				p {
+					text-align: justify;
+				}
+			}
+
+			footer {
+				color: $post-footer-color;
+				font-size: 10px;
+				line-height: 12px;
+				text-align: right;
+
+				address {
+					display: inline;
+				}
+			}
+		}
+	}
+}
