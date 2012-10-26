@@ -5,8 +5,8 @@ html {
 body {
 	background: $bg-color;
 	font-family: helvetica, arial;
-	font-size: 13px;
-	line-height: 15px;
+	font-size: 100%;
+	line-height: 100%;
 }
 
 a {
@@ -34,6 +34,9 @@ a {
 			}
 			h2 {
 				text-align: center;
+				font-size: 1em;
+				line-height: 2.5em;
+				font-style: italic;
 			}
 		}
 		nav {
@@ -65,39 +68,51 @@ a {
 	}
 	.posts {
 		position: relative;
+		
+		&.masonry {
+			.post {
+				float: none;
+			}
+		}
 
 		.post {
 			position: relative;
+			float: left;
 			width: $column-width - $minus;
 			background: $post-bg-color;
 			margin-right: $post-gap;
 			margin-bottom: $post-gap;
 			padding: $post-padding;
 			@include box-shadow(rgba(0,0,0, 0.3) 5px 5px 10px);
+			@include border-radius(2px);
 
 			&.double {
 				width: $column-width * 2 - $minus;
-
-				.content {
-					.picture {
-						width: $column-width * 2 - $post-padding;
-						img {
-							margin-top: -25%;
-						}
+				
+				.picture {
+					width: $column-width * 2 - $post-padding;
+					img {
+						margin-top: -25%;
 					}
+				}
+				
+				.content {
+					
 				}
 			}
 
 			&.triple {
 				width: ($column-width * 3) - $minus;
 
-				.content {
-					.picture {
-						width: $column-width * 3 - $post-padding;
-						img {
-							margin-top: -25%;
-						}
+				.picture {
+					width: $column-width * 3 - $post-padding;
+					img {
+						margin-top: -25%;
 					}
+				}
+				
+				.content {
+					font-size: .95em;
 				}
 			}
 
@@ -105,8 +120,8 @@ a {
 			&.triple {
 				> header {
 					h1 a {
-						font-size: 22px;
-						line-height: 50px;
+						font-size: 1.2em;
+						line-height: 40px;
 					}
 				}
 			}
@@ -117,8 +132,8 @@ a {
 					display: block;
 					min-height: 40px;
 					margin-bottom: 10px;
-					font-size: 18px;
-					line-height: 22px;
+					font-size: 1em;
+					line-height: 1.3em;
 					text-transform: uppercase;
 				}
 			}
@@ -133,21 +148,24 @@ a {
 			// 	border-style: solid;
 			// 	border-color: transparent transparent transparent #f00;
 			// }
+			
+			.picture {
+				display: block;
+				overflow: hidden;
+				max-height: 150px;
+				margin-left: -$post-padding;
+				margin-right: -$post-padding;
+				// margin-bottom: $post-padding;
+				width: $column-width - $post-padding;
+
+				img {
+					width: 100%;
+				}
+			}
 
 			.content {
-				.picture {
-					display: block;
-					overflow: hidden;
-					max-height: 150px;
-					margin-left: -$post-padding;
-					margin-right: -$post-padding;
-					margin-bottom: $post-padding;
-					width: $column-width - $post-padding;
-
-					img {
-						width: 100%;
-					}
-				}
+				font-size: 0.72em;
+				
 				p {
 					text-align: justify;
 				}

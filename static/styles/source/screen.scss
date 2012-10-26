@@ -15,3 +15,31 @@
 
 @import "tri/tablet";
 @import "tri/smartphone";
+
+
+
+.category {
+	position: relative;
+	display: block;
+	
+	span {
+		position: absolute;
+		bottom: 0;
+		left: -18px;
+		background: $tri-red;
+		color: #fff;
+		font-weight: bold;
+		padding: 5px 20px;
+		
+		&:before {
+			content: '';
+			display: block;
+			position: absolute;
+			bottom: -8px;
+			left: 0;
+			border-width: 8px 0 0 8px;
+			border-style: solid;
+			border-color: $tri-dark-red transparent transparent transparent;
+		}
+	}
+}
