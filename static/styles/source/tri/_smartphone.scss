@@ -99,13 +99,21 @@
 							}
 						}
 						
-						.picture {
-							margin-right: -10px;
-							width: auto;
-						}
-						
 						.content {
 							font-size: .95em;
+							
+							.more {
+								display: block;
+								color: #fff;
+								background: $tri-red;
+								margin: $post-padding (-$post-padding) (-$post-padding);
+								text-align: center;
+								line-height: 25px;
+							}
+						}
+						
+						footer {
+							display: none;
 						}
 					}
 				}

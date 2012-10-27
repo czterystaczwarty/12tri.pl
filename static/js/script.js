@@ -3,7 +3,7 @@ $(function(){
 	var $pull = $('#pull'),
 		$menu = $('nav ul'),
 		break_points = [240, 480, 740, 960],
-		brick_sizes = [210, 450, 690],
+		brick_sizes = [230, 470, 710],
 		$window = $(window),
 		windowWidth = $window.width(),
 		
@@ -55,9 +55,9 @@ $(function(){
 						if (windowWidth > break_points[1] && windowWidth < break_points[2]) {
 							colWidth = parseInt(containerWidth/2);
 							// singles items width -> 50% fluid
-							$singles.width(parseInt(colWidth-30));
+							$singles.width(parseInt(colWidth-10));
 							// promoted items width -> 100% fluid
-							$doubles.add($triples).width(containerWidth-30);
+							$doubles.add($triples).width(containerWidth-10);
 						} else if (windowWidth >= break_points[2]) {
 							colWidth = break_points[0];
 							$singles.width(brick_sizes[0]);

@@ -78,38 +78,27 @@ a {
 		.post {
 			position: relative;
 			float: left;
-			width: $column-width - $minus;
+			width: $column-width - $post-gap;
 			background: $post-bg-color;
 			margin-right: $post-gap;
 			margin-bottom: $post-gap;
-			padding: $post-padding;
-			@include box-shadow(rgba(0,0,0, 0.3) 5px 5px 10px);
+			@include box-shadow(rgba(0,0,0, 0.3) 3px 3px 10px);
 			@include border-radius(2px);
+			-webkit-transition: -webkit-box-shadow 0.3s linear;
+			-moz-transition: background 0.3s linear;
+			-o-transition: background 0.3s linear;
+			transition: box-shadow 0.3s linear;
+			
+			&:hover {
+				@include box-shadow(rgba(0,0,0, 0.5) 3px 3px 10px);
+			}
 
 			&.double {
-				width: $column-width * 2 - $minus;
-				
-				.picture {
-					width: $column-width * 2 - $post-padding;
-					img {
-						margin-top: -25%;
-					}
-				}
-				
-				.content {
-					
-				}
+				width: $column-width * 2 - $post-gap;
 			}
 
 			&.triple {
-				width: ($column-width * 3) - $minus;
-
-				.picture {
-					width: $column-width * 3 - $post-padding;
-					img {
-						margin-top: -25%;
-					}
-				}
+				width: ($column-width * 3) - $post-gap;
 				
 				.content {
 					font-size: .95em;
@@ -121,50 +110,46 @@ a {
 				> header {
 					h1 a {
 						font-size: 1.2em;
-						line-height: 40px;
 					}
 				}
 			}
 
 			> header {
-
 				h1 a{
 					display: block;
-					min-height: 40px;
-					margin-bottom: 10px;
+					margin: $post-padding $post-padding 0;
+					padding-bottom: $post-padding;
+					border-bottom: 1px dotted #000;
 					font-size: 1em;
 					line-height: 1.3em;
 					text-transform: uppercase;
 				}
 			}
-
-			// &:before {
-			// 	content: '';
-			// 	display: block;
-			// 	position: absolute;
-			// 	top: 0;
-			// 	left: 0;
-			// 	border-width: 0 0 10px 15px;
-			// 	border-style: solid;
-			// 	border-color: transparent transparent transparent #f00;
-			// }
 			
 			.picture {
 				display: block;
-				overflow: hidden;
-				max-height: 150px;
-				margin-left: -$post-padding;
-				margin-right: -$post-padding;
-				// margin-bottom: $post-padding;
-				width: $column-width - $post-padding;
+				height: 150px;
+				background-repeat: no-repeat;
+				background-position: 50% 50%;
+				// TODO: @mixin
+				-webkit-transition: background 0.3s linear;
+				-moz-transition: background 0.3s linear;
+				-o-transition: background 0.3s linear;
+				transition: background 0.3s linear;
+				background-size: 100%;
+				
+				&:hover {
+					background-size: 110%;
+				}
 
 				img {
-					width: 100%;
+					display: none;
 				}
 			}
 
 			.content {
 				font-size: 0.72em;
+				padding: $post-padding;
 				
 				p {
 					text-align: justify;
@@ -175,6 +160,7 @@ a {
 				color: $post-footer-color;
 				font-size: 10px;
 				line-height: 12px;
+				padding: 0 $post-padding $post-padding;
 				text-align: right;
 
 				address {
