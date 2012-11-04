@@ -1,0 +1,58 @@
+#main {
+	> article {
+		background: $post-bg-color;
+		margin-right: $post-padding;
+		
+		header {
+			position: relative;
+			
+			hgroup {
+				position: absolute;
+				top: 15%;
+				left: 25px;
+				
+				h2 {
+					display: inline-block;
+					background: #000;
+					a {
+						color: #fff;
+					}
+				}
+				h1 {
+					display: inline;
+					background: $tri-red;
+					color: #fff;
+				}
+				.meta {
+					display: inline-block;
+					background: rgba(255,255,255,0.6);
+					margin-top: 2px;
+					a {
+						color: #000;
+					}
+				}
+			}
+		}
+		
+		.picture {
+			height: 200px;
+		}
+		
+		.content {
+			padding: 25px;
+			@media screen and (max-width: 479px) {
+				padding: $post-padding;
+			}
+			
+			.body {
+				@include column-count(2);
+				@include column-rule(1px, dotted, #000);
+				@include column-gap(40px);
+				//text-align: justify;
+				@media screen and (max-width: 739px) {
+					@include column-count(1);
+				}
+			}
+		}
+	}
+}

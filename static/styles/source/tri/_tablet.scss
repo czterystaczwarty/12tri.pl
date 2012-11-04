@@ -2,14 +2,10 @@
 @media screen and (min-width: 740px) and (max-width: 960px) {
 	#container {
 		width: 720px;
-		// padding-left: $post-gap;
 
 		> header {
 			margin-right: $post-gap;
 		}
-	}
-	#main {
-
 	}
 }
 
@@ -27,12 +23,6 @@
 	#main {
 		> header {
 			margin-right: $post-gap;
-		}
-
-		.posts {
-			.post{
-				//width: 50%;
-			}
 		}
 	}
 }
@@ -53,7 +43,7 @@
 				width: 200px;
 			}
 			nav {
-				float: left;
+				margin-left: 220px;
 
 				ul {
 					li {

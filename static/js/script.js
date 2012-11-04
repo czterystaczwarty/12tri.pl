@@ -20,7 +20,7 @@ $(function(){
 				initMansonry();
 				updateNavigation();
 			} else {
-				$('.posts .post').each(function (el, index) {
+				$('.posts article').each(function (el, index) {
 					$(this).removeAttr('style');
 				});
 			}
@@ -39,8 +39,8 @@ $(function(){
 		},
 		
 		initMansonry = function () {
-			var $container = $('.posts'),
-				items = '.post',
+			var $container = $('.list'),
+				items = 'article',
 				$triples	= $container.children('.triple'),
 				$doubles	= $container.children('.double'),
 				$singles	= $container.children().not($triples).not($doubles),

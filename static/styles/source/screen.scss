@@ -1,47 +1,22 @@
-/* Welcome to Compass.
- * In this file you should write your main styles. (or centralize your imports)
- * Import this file using the following HTML or equivalent:
- * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
-
 @import "compass/reset";
 @import "compass/typography/text/replacement";
 @import "compass/utilities/general/clearfix";
 @import "compass/css3/box-shadow";
 @import "compass/css3/border-radius";
 @import "compass/css3/transition";
+@import "compass/css3/columns";
 
+// config
 @import "tri/variables";
-@import "tri/desktop";
 
+// TODO: only layout responsive, fonts, size, images -> post, even, typo
+@import "tri/desktop";
 @import "tri/tablet";
 @import "tri/smartphone";
 
+@import "tri/typography";
+@import "tri/list";
+@import "tri/single";
+@import "tri/calendar";
 
-
-.category {
-	position: relative;
-	display: block;
-	
-	span {
-		position: absolute;
-		bottom: 0;
-		left: -8px;
-		background: $tri-red;
-		color: #fff;
-		font-weight: bold;
-		padding: 0 25px;
-		font-size: 0.8em;
-		line-height: 2em;
-		
-		&:before {
-			content: '';
-			display: block;
-			position: absolute;
-			bottom: -8px;
-			left: 0;
-			border-width: 8px 0 0 8px;
-			border-style: solid;
-			border-color: $tri-dark-red transparent transparent transparent;
-		}
-	}
-}
+@import "tri/ribbon";

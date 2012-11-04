@@ -4,14 +4,6 @@ html {
 
 body {
 	background: $bg-color;
-	font-family: helvetica, arial;
-	font-size: 100%;
-	line-height: 100%;
-}
-
-a {
-	text-decoration: none;
-	color: $link-color;
 }
 
 #container {
@@ -23,7 +15,8 @@ a {
 		width: $left-container-width - $post-gap;
 		height: 100%;
 		padding: 20px 0 50px;
-		background: #fff;
+$post-bg-color: #fff;
+		background: $post-bg-color;
 		@include box-shadow(rgba(0,0,0, 0.3) 5px 5px 10px);
 
 		hgroup {
@@ -31,12 +24,6 @@ a {
 				display: block;
 				height: 162px;
 				@include replace-text('logo.png');
-			}
-			h2 {
-				text-align: center;
-				font-size: 1em;
-				line-height: 2.5em;
-				font-style: italic;
 			}
 		}
 		nav {
@@ -66,106 +53,20 @@ a {
 		margin: 0 $post-gap $post-gap 0;
 		@include box-shadow(rgba(0,0,0, 0.3) 5px 5px 10px);
 	}
-	.posts {
-		position: relative;
-		
-		&.masonry {
-			.post {
-				float: none;
-			}
-		}
+	
+}
 
-		.post {
-			position: relative;
-			float: left;
-			width: $column-width - $post-gap;
-			background: $post-bg-color;
-			margin-right: $post-gap;
-			margin-bottom: $post-gap;
-			@include box-shadow(rgba(0,0,0, 0.3) 3px 3px 10px);
-			@include border-radius(2px);
-			-webkit-transition: -webkit-box-shadow 0.3s linear;
-			-moz-transition: background 0.3s linear;
-			-o-transition: background 0.3s linear;
-			transition: box-shadow 0.3s linear;
+article {
+	> header {
+		.picture {
+			display: block;
+			height: 150px;
+			background-repeat: no-repeat;
+			background-position: 50% 50%;
+			background-size: 100%;
 			
-			&:hover {
-				@include box-shadow(rgba(0,0,0, 0.5) 3px 3px 10px);
-			}
-
-			&.double {
-				width: $column-width * 2 - $post-gap;
-			}
-
-			&.triple {
-				width: ($column-width * 3) - $post-gap;
-				
-				.content {
-					font-size: .95em;
-				}
-			}
-
-			&.double,
-			&.triple {
-				> header {
-					h1 a {
-						font-size: 1.2em;
-					}
-				}
-			}
-
-			> header {
-				h1 a{
-					display: block;
-					margin: $post-padding $post-padding 0;
-					padding-bottom: $post-padding;
-					border-bottom: 1px dotted #000;
-					font-size: 1em;
-					line-height: 1.3em;
-					text-transform: uppercase;
-				}
-			}
-			
-			.picture {
-				display: block;
-				height: 150px;
-				background-repeat: no-repeat;
-				background-position: 50% 50%;
-				// TODO: @mixin
-				-webkit-transition: background 0.3s linear;
-				-moz-transition: background 0.3s linear;
-				-o-transition: background 0.3s linear;
-				transition: background 0.3s linear;
-				background-size: 100%;
-				
-				&:hover {
-					background-size: 110%;
-				}
-
-				img {
-					display: none;
-				}
-			}
-
-			.content {
-				font-size: 0.72em;
-				padding: $post-padding;
-				
-				p {
-					text-align: justify;
-				}
-			}
-
-			footer {
-				color: $post-footer-color;
-				font-size: 10px;
-				line-height: 12px;
-				padding: 0 $post-padding $post-padding;
-				text-align: right;
-
-				address {
-					display: inline;
-				}
+			img {
+				display: none;
 			}
 		}
 	}

@@ -23,8 +23,6 @@
 					margin-bottom: 5px;
 				}
 				h2 {
-					font-size: 120%;
-					line-height: 200%;
 					margin-bottom: 5px;
 				}
 			}
@@ -51,6 +49,7 @@
 							background: #000;
 							color: #fff;
 							margin: 1px;
+							// TODO: move to _nav.scss
 							font-size: 0.8em;
 							line-height: 80px;
 							text-align: center;
@@ -63,6 +62,7 @@
 					display: block;
 					background: #D92027 url(../images/menu.png) no-repeat 95% 50%;
 					color: #fff;
+					// TODO: move to _nav.scss
 					font-size: 15px;
 					font-weight: bold;
 					line-height: 45px;
@@ -81,42 +81,8 @@
 				margin-right: 0;
 			}
 
-			.posts {
-				.post {
-					&,
-					&.double,
-					&.triple {
-						width: auto;
-						margin-right: 0;
-						@include box-shadow(rgba(0,0,0, 0.6) 0px 5px 7px);
-
-						header {
-
-							h1 a{
-								min-height: 20px;
-								font-size: 1.17em;
-								line-height: 1.3em;
-							}
-						}
-						
-						.content {
-							font-size: .95em;
-							
-							.more {
-								display: block;
-								color: #fff;
-								background: $tri-red;
-								margin: $post-padding (-$post-padding) (-$post-padding);
-								text-align: center;
-								line-height: 25px;
-							}
-						}
-						
-						footer {
-							display: none;
-						}
-					}
-				}
+			> article {
+				margin-right: 0;
 			}
 		}
 	}

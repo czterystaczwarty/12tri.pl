@@ -12,11 +12,8 @@
 	<meta name="author" content="">
 
 	<meta name="viewport" content="width=device-width,initial-scale=1">
-
-	<!-- CSS concatenated and minified via ant build script-->
 	<link rel="stylesheet" href="styles/screen.css">
-	<!-- end CSS-->
-
+	
 	<script src="js/libs/modernizr-2.6.1.js"></script>
 </head>
 <body>
@@ -30,12 +27,12 @@
 			</hgroup>
 			<nav>
 				<ul>
-					<li><a href="#">Główna</a></li>
-					<li><a href="#">O nas</a></li>
-					<li><a href="#">Treningi</a></li>
-					<li><a href="#">Obozy biegowe </a></li>
-					<li><a href="#">Wydarzenia</a></li>
-					<li><a href="#">Kontakt</a></li>
+					<li id="home"><a href="#">Główna</a></li>
+					<li id="about"><a href="#">O nas</a></li>
+					<li id="trainings"><a href="#">Treningi</a></li>
+					<li id="training-camps"><a href="#">Obozy biegowe </a></li>
+					<li id="events"><a href="#">Wydarzenia</a></li>
+					<li id="contact"><a href="#">Kontakt</a></li>
 				</ul>
 				 <a href="#" id="pull">Menu</a>
 			</nav>
@@ -46,7 +43,7 @@
 				<p><strong>12tri.pl</strong> to klub biegowo-triathlonowy organizujący obozy biegowe i darmowe treningi po okiem trenerów w Warszawie i Olsztynie.</p>
 				<a href="#more" class="more">dowiedz się więcej</a>
 			</header>
-			<section class="posts">
+			<section class="posts list">
 
 				<article class="post double">
 					<header>
@@ -54,7 +51,7 @@
 							<img src="images/zdjecie10.jpg" alt="">
 						</a>
 						<span class="category"><span>Porady</span></span>
-						<h1>
+						<h1 class="title">
 							<a href="#">Kompresja Sportowa</a>
 						</h1>
 					</header>
@@ -67,6 +64,43 @@
 						<abbr class="published" title="2012-10-10T14:07:00-07:00"><!-- YYYYMMDDThh:mm:ss+ZZZZ -->10 październik 2012</abbr> <address class="vcard author">przez <a class="url fn" href="#">Michał Rachwał</a></address>
 					</footer>
 				</article>
+				
+				<article class="comming-events">
+					<header>
+						<h1 class="title">
+							<a href="#">Zbliżające się imprezy</a>
+						</h1>
+					</header>
+					<div class="content">
+						<ul>
+							<li>
+								<a href="#event-view" class="run" title="abc">
+									<i></i>
+									<span class="date">dzisiaj</span>
+									<span class="name">Biegnij Warszawo</span>
+									<span class="info">10km</span>
+								</a>
+							</li>
+							<li>
+								<a href="#event-view" class="run" title="abc">
+									<i></i>
+									<span class="date">jutro</span>
+									<span class="name">Bieg do okoła ZŁO</span>
+									<span class="info">10km</span>
+								</a>
+							</li>
+							<li>
+								<a href="#event-view" class="tri" title="abc">
+									<i></i>
+									<span class="date">22.11</span>
+									<span class="name">Somewhere Triathlon</span>
+									<span class="info">IM</span>
+								</a>
+							</li>
+						</ul>
+						<a href="#more" class="more">Kalendarz imprez</a>
+					</div>
+				</article>
 
 				<article class="post run">
 					<header>
@@ -74,7 +108,7 @@
 							<img src="images/logo_bn_2012_ok.jpg" alt="">
 						</a>
 						<span class="category"><span>Imprezy</span></span>
-						<h1>
+						<h1 class="title">
 							<a href="#">Ruszają Zapisy Do XXIV Biegu Niepodległości</a>
 						</h1>
 					</header>
@@ -86,53 +120,60 @@
 						<abbr class="published" title="2012-10-10T14:07:00-07:00"><!-- YYYYMMDDThh:mm:ss+ZZZZ -->10 październik 2012</abbr> <address class="vcard author">przez <a class="url fn" href="#">Michał Rachwał</a></address>
 					</footer>
 				</article>
-
-				<article class="post swim">
-					<header>
-						<h1>
-							<a href="#">Ruszają Zapisy Do XXIV Biegu Niepodległości</a>
-						</h1>
-					</header>
-					<a href="#" class="picture">
-						<img src="images/felix_1.jpg" alt="">
-					</a>
+				
+				<article class="fb-fanpage double">
+					<span class="ribbon"><span>Facebook</span></span>
 					<div class="content">
-						<p>Już 16 października rozpoczynają się zapisy do <strong>XXIV Biegu Niepodległości</strong>. Na uczestników czeka pula 8500 pakietów startowych, które zostaną wydane biegaczom, zawodnikom Nordic Walking oraz uczestnikom poruszającym się na wózkach i rolkach.</p>
-						<a href="#more" class="more">czytaj dalej</a>
+						<div class="fb-like-box" data-href="https://www.facebook.com/12tripl" data-width="460" data-show-faces="true" data-border-color="#F2F7FC" data-stream="false" data-header="false"></div>
 					</div>
-					<footer>
-						<abbr class="published" title="2012-10-10T14:07:00-07:00"><!-- YYYYMMDDThh:mm:ss+ZZZZ -->10 październik 2012</abbr> <address class="vcard author">przez <a class="url fn" href="#">Michał Rachwał</a></address>
-					</footer>
 				</article>
 
 				<article class="post swim">
 					<header>
-						<h1>
-							<a href="#">Ruszają Zapisy Do XXIV Biegu Niepodległości</a>
-						</h1>
-					</header>
-					<a href="#" class="picture">
-						<img src="images/felix_1.jpg" alt="">
-					</a>
-					<div class="content">
-						<p>Już 16 października rozpoczynają się zapisy do <strong>XXIV Biegu Niepodległości</strong>. Na uczestników czeka pula 8500 pakietów startowych, które zostaną wydane biegaczom, zawodnikom Nordic Walking oraz uczestnikom poruszającym się na wózkach i rolkach.</p>
-						<a href="#more" class="more">czytaj dalej</a>
-					</div>
-					<footer>
-						<abbr class="published" title="2012-10-10T14:07:00-07:00"><!-- YYYYMMDDThh:mm:ss+ZZZZ -->10 październik 2012</abbr> <address class="vcard author">przez <a class="url fn" href="#">Michał Rachwał</a></address>
-					</footer>
-				</article>
-
-				<article class="post swim">
-					<header>
-						<h1>
-							<a href="#">Ruszają Zapisy Do XXIV Biegu Niepodległości</a>
-						</h1>
-					</header>
-					<div class="content">
-						<a href="#" class="picture">
+						<a href="#" class="picture" style="background-image: url(images/felix_1.jpg)">
 							<img src="images/felix_1.jpg" alt="">
 						</a>
+						<h1 class="title">
+							<a href="#">Ruszają Zapisy Do XXIV Biegu Niepodległości</a>
+						</h1>
+					</header>
+					<div class="content">
+						<p>Już 16 października rozpoczynają się zapisy do <strong>XXIV Biegu Niepodległości</strong>. Na uczestników czeka pula 8500 pakietów startowych, które zostaną wydane biegaczom, zawodnikom Nordic Walking oraz uczestnikom poruszającym się na wózkach i rolkach.</p>
+						<a href="#more" class="more">czytaj dalej</a>
+					</div>
+					<footer>
+						<abbr class="published" title="2012-10-10T14:07:00-07:00"><!-- YYYYMMDDThh:mm:ss+ZZZZ -->10 październik 2012</abbr> <address class="vcard author">przez <a class="url fn" href="#">Michał Rachwał</a></address>
+					</footer>
+				</article>
+
+				<article class="post swim">
+					<header>
+						<a href="#" class="picture" style="background-image: url(images/felix_1.jpg)">
+							<img src="images/felix_1.jpg" alt="">
+						</a>
+						<h1 class="title">
+							<a href="#">Ruszają Zapisy Do XXIV Biegu Niepodległości</a>
+						</h1>
+					</header>
+					<div class="content">
+						<p>Już 16 października rozpoczynają się zapisy do <strong>XXIV Biegu Niepodległości</strong>. Na uczestników czeka pula 8500 pakietów startowych, które zostaną wydane biegaczom, zawodnikom Nordic Walking oraz uczestnikom poruszającym się na wózkach i rolkach.</p>
+						<a href="#more" class="more">czytaj dalej</a>
+					</div>
+					<footer>
+						<abbr class="published" title="2012-10-10T14:07:00-07:00"><!-- YYYYMMDDThh:mm:ss+ZZZZ -->10 październik 2012</abbr> <address class="vcard author">przez <a class="url fn" href="#">Michał Rachwał</a></address>
+					</footer>
+				</article>
+
+				<article class="post swim">
+					<header>
+						<a href="#" class="picture" style="background-image: url(images/felix_1.jpg)">
+							<img src="images/felix_1.jpg" alt="">
+						</a>
+						<h1 class="title">
+							<a href="#">Ruszają Zapisy Do XXIV Biegu Niepodległości</a>
+						</h1>
+					</header>
+					<div class="content">
 						<p>Już 16 października rozpoczynają się zapisy do <strong>XXIV Biegu Niepodległości</strong>. Na uczestników czeka pula 8500 pakietów startowych, które zostaną wydane biegaczom, zawodnikom Nordic Walking oraz uczestnikom poruszającym się na wózkach i rolkach.</p>
 						<a href="#more" class="more">czytaj dalej</a>
 					</div>
@@ -169,8 +210,15 @@
 
 	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
 	<script>window.jQuery || document.write('<script src="js/libs/jquery-1.8.2.min.js"><\/script>')</script>
+	<div id="fb-root"></div>
+	<script>(function(d, s, id) {
+		var js, fjs = d.getElementsByTagName(s)[0];
+		if (d.getElementById(id)) return;
+		js = d.createElement(s); js.id = id;
+		js.src = "//connect.facebook.net/pl_PL/all.js#xfbml=1&appId=323717090981482";
+	fjs.parentNode.insertBefore(js, fjs);
+	}(document, 'script', 'facebook-jssdk'));</script>
 	<script src="js/libs/jquery.masonry.min.js"></script>
-
 	<script defer src="js/script.js"></script>
 	<!-- end scripts-->
 

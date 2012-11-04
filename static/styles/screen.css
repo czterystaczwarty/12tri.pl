@@ -1,7 +1,3 @@
-/* Welcome to Compass.
- * In this file you should write your main styles. (or centralize your imports)
- * Import this file using the following HTML or equivalent:
- * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
 /* line 17, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -75,34 +71,25 @@ html {
 /* line 5, source/tri/_desktop.scss */
 body {
   background: #dddddd;
-  font-family: helvetica, arial;
-  font-size: 100%;
-  line-height: 100%;
 }
 
-/* line 12, source/tri/_desktop.scss */
-a {
-  text-decoration: none;
-  color: #d92027;
-}
-
-/* line 17, source/tri/_desktop.scss */
+/* line 9, source/tri/_desktop.scss */
 #container {
   margin: 0 auto;
   width: 960px;
 }
-/* line 21, source/tri/_desktop.scss */
+/* line 13, source/tri/_desktop.scss */
 #container > header {
   position: fixed;
   width: 230px;
   height: 100%;
   padding: 20px 0 50px;
-  background: #fff;
+  background: white;
   -webkit-box-shadow: rgba(0, 0, 0, 0.3) 5px 5px 10px;
   -moz-box-shadow: rgba(0, 0, 0, 0.3) 5px 5px 10px;
   box-shadow: rgba(0, 0, 0, 0.3) 5px 5px 10px;
 }
-/* line 30, source/tri/_desktop.scss */
+/* line 23, source/tri/_desktop.scss */
 #container > header hgroup h1 a {
   display: block;
   height: 162px;
@@ -113,32 +100,25 @@ a {
   background-repeat: no-repeat;
   background-position: 50% 50%;
 }
-/* line 35, source/tri/_desktop.scss */
-#container > header hgroup h2 {
-  text-align: center;
-  font-size: 1em;
-  line-height: 2.5em;
-  font-style: italic;
-}
-/* line 43, source/tri/_desktop.scss */
+/* line 30, source/tri/_desktop.scss */
 #container > header nav ul {
   display: block;
 }
-/* line 46, source/tri/_desktop.scss */
+/* line 33, source/tri/_desktop.scss */
 #container > header nav #pull {
   display: none;
 }
-/* line 52, source/tri/_desktop.scss */
+/* line 39, source/tri/_desktop.scss */
 #container footer {
   clear: both;
 }
 
-/* line 59, source/tri/_desktop.scss */
+/* line 46, source/tri/_desktop.scss */
 #main {
   margin-left: 240px;
   width: 720px;
 }
-/* line 63, source/tri/_desktop.scss */
+/* line 50, source/tri/_desktop.scss */
 #main > header {
   padding: 10px;
   background: #eee;
@@ -147,107 +127,18 @@ a {
   -moz-box-shadow: rgba(0, 0, 0, 0.3) 5px 5px 10px;
   box-shadow: rgba(0, 0, 0, 0.3) 5px 5px 10px;
 }
-/* line 69, source/tri/_desktop.scss */
-#main .posts {
-  position: relative;
-}
-/* line 73, source/tri/_desktop.scss */
-#main .posts.masonry .post {
-  float: none;
-}
-/* line 78, source/tri/_desktop.scss */
-#main .posts .post {
-  position: relative;
-  float: left;
-  width: 230px;
-  background: white;
-  margin-right: 10px;
-  margin-bottom: 10px;
-  -webkit-box-shadow: rgba(0, 0, 0, 0.3) 3px 3px 10px;
-  -moz-box-shadow: rgba(0, 0, 0, 0.3) 3px 3px 10px;
-  box-shadow: rgba(0, 0, 0, 0.3) 3px 3px 10px;
-  -webkit-border-radius: 2px;
-  -moz-border-radius: 2px;
-  -ms-border-radius: 2px;
-  -o-border-radius: 2px;
-  border-radius: 2px;
-  -webkit-transition: -webkit-box-shadow 0.3s linear;
-  -moz-transition: background 0.3s linear;
-  -o-transition: background 0.3s linear;
-  transition: box-shadow 0.3s linear;
-}
-/* line 92, source/tri/_desktop.scss */
-#main .posts .post:hover {
-  -webkit-box-shadow: rgba(0, 0, 0, 0.5) 3px 3px 10px;
-  -moz-box-shadow: rgba(0, 0, 0, 0.5) 3px 3px 10px;
-  box-shadow: rgba(0, 0, 0, 0.5) 3px 3px 10px;
-}
-/* line 96, source/tri/_desktop.scss */
-#main .posts .post.double {
-  width: 470px;
-}
-/* line 100, source/tri/_desktop.scss */
-#main .posts .post.triple {
-  width: 710px;
-}
-/* line 103, source/tri/_desktop.scss */
-#main .posts .post.triple .content {
-  font-size: .95em;
-}
-/* line 111, source/tri/_desktop.scss */
-#main .posts .post.double > header h1 a, #main .posts .post.triple > header h1 a {
-  font-size: 1.2em;
-}
-/* line 118, source/tri/_desktop.scss */
-#main .posts .post > header h1 a {
-  display: block;
-  margin: 10px 10px 0;
-  padding-bottom: 10px;
-  border-bottom: 1px dotted #000;
-  font-size: 1em;
-  line-height: 1.3em;
-  text-transform: uppercase;
-}
-/* line 129, source/tri/_desktop.scss */
-#main .posts .post .picture {
+
+/* line 61, source/tri/_desktop.scss */
+article > header .picture {
   display: block;
   height: 150px;
   background-repeat: no-repeat;
   background-position: 50% 50%;
-  -webkit-transition: background 0.3s linear;
-  -moz-transition: background 0.3s linear;
-  -o-transition: background 0.3s linear;
-  transition: background 0.3s linear;
   background-size: 100%;
 }
-/* line 141, source/tri/_desktop.scss */
-#main .posts .post .picture:hover {
-  background-size: 110%;
-}
-/* line 145, source/tri/_desktop.scss */
-#main .posts .post .picture img {
+/* line 68, source/tri/_desktop.scss */
+article > header .picture img {
   display: none;
-}
-/* line 150, source/tri/_desktop.scss */
-#main .posts .post .content {
-  font-size: 0.72em;
-  padding: 10px;
-}
-/* line 154, source/tri/_desktop.scss */
-#main .posts .post .content p {
-  text-align: justify;
-}
-/* line 159, source/tri/_desktop.scss */
-#main .posts .post footer {
-  color: #888888;
-  font-size: 10px;
-  line-height: 12px;
-  padding: 0 10px 10px;
-  text-align: right;
-}
-/* line 166, source/tri/_desktop.scss */
-#main .posts .post footer address {
-  display: inline;
 }
 
 @media screen and (min-width: 740px) and (max-width: 960px) {
@@ -255,31 +146,31 @@ a {
   #container {
     width: 720px;
   }
-  /* line 7, source/tri/_tablet.scss */
+  /* line 6, source/tri/_tablet.scss */
   #container > header {
     margin-right: 10px;
   }
 }
 @media screen and (min-width: 480px) and (max-width: 739px) {
-  /* line 18, source/tri/_tablet.scss */
+  /* line 14, source/tri/_tablet.scss */
   #container {
     width: auto;
     margin-left: 10px;
     margin-right: 0;
   }
-  /* line 23, source/tri/_tablet.scss */
+  /* line 19, source/tri/_tablet.scss */
   #container > header {
     margin-right: 10px;
   }
 
-  /* line 28, source/tri/_tablet.scss */
+  /* line 24, source/tri/_tablet.scss */
   #main > header {
     margin-right: 10px;
   }
 }
 @media screen and (min-width: 480px) and (max-width: 960px) {
   /* Target landscape smartphones, portrait tablets, narrow desktops */
-  /* line 44, source/tri/_tablet.scss */
+  /* line 34, source/tri/_tablet.scss */
   #container > header {
     position: relative;
     width: auto;
@@ -287,20 +178,20 @@ a {
     overflow: hidden;
     padding: 10px;
   }
-  /* line 51, source/tri/_tablet.scss */
+  /* line 41, source/tri/_tablet.scss */
   #container > header hgroup {
     float: left;
     width: 200px;
   }
-  /* line 55, source/tri/_tablet.scss */
+  /* line 45, source/tri/_tablet.scss */
   #container > header nav {
-    float: left;
+    margin-left: 220px;
   }
-  /* line 59, source/tri/_tablet.scss */
+  /* line 49, source/tri/_tablet.scss */
   #container > header nav ul li {
     float: left;
   }
-  /* line 66, source/tri/_tablet.scss */
+  /* line 56, source/tri/_tablet.scss */
   #container #main {
     margin-left: 0;
     width: auto;
@@ -333,11 +224,9 @@ a {
   }
   /* line 25, source/tri/_smartphone.scss */
   #container > header hgroup h2 {
-    font-size: 120%;
-    line-height: 200%;
     margin-bottom: 5px;
   }
-  /* line 32, source/tri/_smartphone.scss */
+  /* line 30, source/tri/_smartphone.scss */
   #container > header nav {
     position: absolute;
     top: 0;
@@ -347,18 +236,18 @@ a {
     -moz-box-shadow: rgba(0, 0, 0, 0.7) 0px 5px 7px -3px;
     box-shadow: rgba(0, 0, 0, 0.7) 0px 5px 7px -3px;
   }
-  /* line 39, source/tri/_smartphone.scss */
+  /* line 37, source/tri/_smartphone.scss */
   #container > header nav ul {
     overflow: hidden;
     display: none;
     margin: 1px 0;
   }
-  /* line 44, source/tri/_smartphone.scss */
+  /* line 42, source/tri/_smartphone.scss */
   #container > header nav ul li {
     width: 33.3%;
     float: left;
   }
-  /* line 48, source/tri/_smartphone.scss */
+  /* line 46, source/tri/_smartphone.scss */
   #container > header nav ul li a {
     display: block;
     height: 55px;
@@ -369,7 +258,7 @@ a {
     line-height: 80px;
     text-align: center;
   }
-  /* line 61, source/tri/_smartphone.scss */
+  /* line 60, source/tri/_smartphone.scss */
   #container > header nav #pull {
     padding: 0 10px;
     display: block;
@@ -391,26 +280,263 @@ a {
   #container #main > header {
     margin-right: 0;
   }
-  /* line 88, source/tri/_smartphone.scss */
-  #container #main .posts .post, #container #main .posts .post.double, #container #main .posts .post.triple {
+  /* line 84, source/tri/_smartphone.scss */
+  #container #main > article {
+    margin-right: 0;
+  }
+}
+/* line 5, source/tri/_typography.scss */
+body {
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 85%;
+  line-height: 140%;
+}
+@media screen and (max-width: 479px) {
+  /* line 5, source/tri/_typography.scss */
+  body {
+    font-size: 100%;
+  }
+}
+
+/* line 16, source/tri/_typography.scss */
+a {
+  text-decoration: none;
+}
+
+/* line 19, source/tri/_typography.scss */
+a:hover {
+  text-decoration: underline;
+}
+
+/* line 26, source/tri/_typography.scss */
+#container > header hgroup h2 {
+  text-align: center;
+  font-style: italic;
+}
+
+/* line 38, source/tri/_typography.scss */
+#main > article hgroup h1 {
+  padding: 0 5px;
+  font-size: 2.5em;
+  letter-spacing: 1px;
+  line-height: 1.4;
+}
+/* line 44, source/tri/_typography.scss */
+#main > article hgroup h2 {
+  padding: 0 5px;
+  line-height: 1.5;
+}
+/* line 48, source/tri/_typography.scss */
+#main > article hgroup .meta {
+  padding: 0 5px;
+  line-height: 1.5;
+}
+@media screen and (max-width: 479px) {
+  /* line 53, source/tri/_typography.scss */
+  #main > article hgroup h1 {
+    font-size: 2em;
+  }
+  /* line 56, source/tri/_typography.scss */
+  #main > article hgroup h2 {
+    font-size: 1em;
+  }
+  /* line 59, source/tri/_typography.scss */
+  #main > article hgroup .meta {
+    font-size: 0.9em;
+  }
+}
+/* line 67, source/tri/_typography.scss */
+#main > article .content p.lead {
+  font-size: 1.3em;
+  line-height: 1.5;
+  margin-bottom: 2em;
+}
+@media screen and (max-width: 479px) {
+  /* line 67, source/tri/_typography.scss */
+  #main > article .content p.lead {
+    font-size: 1.1em;
+    line-height: 1.3;
+    font-weight: bold;
+  }
+}
+/* line 80, source/tri/_typography.scss */
+#main > article .content .body h2 {
+  font-weight: bold;
+  font-size: 1.3em;
+  line-height: 1.6;
+}
+/* line 85, source/tri/_typography.scss */
+#main > article .content .body h3 {
+  font-weight: bold;
+  font-size: 1.2em;
+}
+/* line 90, source/tri/_typography.scss */
+#main > article .content .body p {
+  font-size: 1.1em;
+  line-height: 1.45;
+  margin-bottom: 1.5em;
+}
+/* line 101, source/tri/_typography.scss */
+#main .list article h1 {
+  font-size: 1.5em;
+  line-height: 1.2;
+}
+
+/* line 1, source/tri/_list.scss */
+.list {
+  position: relative;
+}
+/* line 5, source/tri/_list.scss */
+.list.masonry article {
+  float: none;
+}
+/* line 10, source/tri/_list.scss */
+.list article {
+  position: relative;
+  float: left;
+  width: 230px;
+  background: white;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.3) 3px 3px 10px;
+  -moz-box-shadow: rgba(0, 0, 0, 0.3) 3px 3px 10px;
+  box-shadow: rgba(0, 0, 0, 0.3) 3px 3px 10px;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  -ms-border-radius: 2px;
+  -o-border-radius: 2px;
+  border-radius: 2px;
+  -webkit-transition: -webkit-box-shadow 0.3s linear;
+  -moz-transition: background 0.3s linear;
+  -o-transition: background 0.3s linear;
+  transition: box-shadow 0.3s linear;
+}
+/* line 25, source/tri/_list.scss */
+.list article:hover {
+  -webkit-box-shadow: rgba(0, 0, 0, 0.5) 3px 3px 10px;
+  -moz-box-shadow: rgba(0, 0, 0, 0.5) 3px 3px 10px;
+  box-shadow: rgba(0, 0, 0, 0.5) 3px 3px 10px;
+}
+/* line 29, source/tri/_list.scss */
+.list article.double {
+  width: 470px;
+}
+/* line 33, source/tri/_list.scss */
+.list article.triple {
+  width: 710px;
+}
+/* line 37, source/tri/_list.scss */
+.list article.fb-fanpage {
+  height: 300px;
+  background: #F2F7FC;
+}
+/* line 43, source/tri/_list.scss */
+.list article.fb-fanpage .ribbon span {
+  background: #2084c6;
+}
+/* line 45, source/tri/_list.scss */
+.list article.fb-fanpage .ribbon span:before {
+  border-top-color: #145580;
+}
+/* line 51, source/tri/_list.scss */
+.list article.fb-fanpage .content {
+  padding: 5px;
+  overflow: hidden;
+}
+/* line 58, source/tri/_list.scss */
+.list article.comming-events .content ul {
+  display: table;
+  width: 100%;
+}
+/* line 62, source/tri/_list.scss */
+.list article.comming-events .content ul li {
+  display: table-row-group;
+}
+/* line 64, source/tri/_list.scss */
+.list article.comming-events .content ul li a {
+  display: table-row;
+  font-size: 0.9em;
+  line-height: 1.6;
+}
+/* line 69, source/tri/_list.scss */
+.list article.comming-events .content ul li a:hover {
+  text-decoration: none;
+  background: #eee;
+}
+/* line 74, source/tri/_list.scss */
+.list article.comming-events .content ul li a i {
+  width: 16px;
+  height: 100%;
+  background: url(../images/icons/runner.png) no-repeat 50% 50%;
+}
+/* line 80, source/tri/_list.scss */
+.list article.comming-events .content ul li a span,
+.list article.comming-events .content ul li a i {
+  display: table-cell;
+  border-bottom: 1px solid #ccc;
+}
+/* line 84, source/tri/_list.scss */
+.list article.comming-events .content ul li a span {
+  padding-left: 5px;
+}
+/* line 92, source/tri/_list.scss */
+.list article.comming-events .content ul li a .info {
+  text-align: center;
+}
+/* line 101, source/tri/_list.scss */
+.list article > header h1 a {
+  color: #d92027;
+  display: block;
+  margin: 10px 10px 0;
+  padding-bottom: 10px;
+  border-bottom: 1px dotted #000;
+}
+/* line 110, source/tri/_list.scss */
+.list article .picture {
+  height: 150px;
+  -webkit-transition: background 0.3s linear;
+  -moz-transition: background 0.3s linear;
+  -o-transition: background 0.3s linear;
+  transition: background 0.3s linear;
+}
+/* line 118, source/tri/_list.scss */
+.list article .picture:hover {
+  background-size: 110%;
+}
+/* line 123, source/tri/_list.scss */
+.list article .content {
+  padding: 10px;
+}
+/* line 127, source/tri/_list.scss */
+.list article footer {
+  color: #888888;
+  padding: 0 10px 10px;
+}
+/* line 131, source/tri/_list.scss */
+.list article footer address {
+  display: inline;
+}
+
+@media screen and (max-width: 479px) {
+  /* line 140, source/tri/_list.scss */
+  .list article {
+    float: none;
+    position: static;
+  }
+  /* line 146, source/tri/_list.scss */
+  .list article, .list article.double, .list article.triple {
     width: auto;
     margin-right: 0;
     -webkit-box-shadow: rgba(0, 0, 0, 0.6) 0px 5px 7px;
     -moz-box-shadow: rgba(0, 0, 0, 0.6) 0px 5px 7px;
     box-shadow: rgba(0, 0, 0, 0.6) 0px 5px 7px;
   }
-  /* line 95, source/tri/_smartphone.scss */
-  #container #main .posts .post header h1 a, #container #main .posts .post.double header h1 a, #container #main .posts .post.triple header h1 a {
-    min-height: 20px;
-    font-size: 1.17em;
-    line-height: 1.3em;
-  }
-  /* line 102, source/tri/_smartphone.scss */
-  #container #main .posts .post .content, #container #main .posts .post.double .content, #container #main .posts .post.triple .content {
+  /* line 152, source/tri/_list.scss */
+  .list article .content, .list article.double .content, .list article.triple .content {
     font-size: .95em;
   }
-  /* line 105, source/tri/_smartphone.scss */
-  #container #main .posts .post .content .more, #container #main .posts .post.double .content .more, #container #main .posts .post.triple .content .more {
+  /* line 155, source/tri/_list.scss */
+  .list article .content .more, .list article.double .content .more, .list article.triple .content .more {
     display: block;
     color: #fff;
     background: #d92027;
@@ -418,30 +544,145 @@ a {
     text-align: center;
     line-height: 25px;
   }
-  /* line 115, source/tri/_smartphone.scss */
-  #container #main .posts .post footer, #container #main .posts .post.double footer, #container #main .posts .post.triple footer {
+  /* line 165, source/tri/_list.scss */
+  .list article footer, .list article.double footer, .list article.triple footer {
     display: none;
   }
 }
-/* line 21, source/screen.scss */
-.category {
-  position: relative;
-  display: block;
+/* line 2, source/tri/_single.scss */
+#main > article {
+  background: white;
+  margin-right: 10px;
 }
-/* line 25, source/screen.scss */
-.category span {
+/* line 6, source/tri/_single.scss */
+#main > article header {
+  position: relative;
+}
+/* line 9, source/tri/_single.scss */
+#main > article header hgroup {
   position: absolute;
-  bottom: 0;
-  left: -8px;
+  top: 15%;
+  left: 25px;
+}
+/* line 14, source/tri/_single.scss */
+#main > article header hgroup h2 {
+  display: inline-block;
+  background: #000;
+}
+/* line 17, source/tri/_single.scss */
+#main > article header hgroup h2 a {
+  color: #fff;
+}
+/* line 21, source/tri/_single.scss */
+#main > article header hgroup h1 {
+  display: inline;
+  background: #d92027;
+  color: #fff;
+}
+/* line 26, source/tri/_single.scss */
+#main > article header hgroup .meta {
+  display: inline-block;
+  background: rgba(255, 255, 255, 0.6);
+  margin-top: 2px;
+}
+/* line 30, source/tri/_single.scss */
+#main > article header hgroup .meta a {
+  color: #000;
+}
+/* line 37, source/tri/_single.scss */
+#main > article .picture {
+  height: 200px;
+}
+/* line 41, source/tri/_single.scss */
+#main > article .content {
+  padding: 25px;
+}
+@media screen and (max-width: 479px) {
+  /* line 41, source/tri/_single.scss */
+  #main > article .content {
+    padding: 10px;
+  }
+}
+/* line 47, source/tri/_single.scss */
+#main > article .content .body {
+  -webkit-column-count: 2;
+  -moz-column-count: 2;
+  -ms-column-count: 2;
+  -o-column-count: 2;
+  column-count: 2;
+  -webkit-column-rule: 1px dotted black;
+  -moz-column-rule: 1px dotted black;
+  -ms-column-rule: 1px dotted black;
+  -o-column-rule: 1px dotted black;
+  column-rule: 1px dotted black;
+  -webkit-column-gap: 40px;
+  -moz-column-gap: 40px;
+  -ms-column-gap: 40px;
+  -o-column-gap: 40px;
+  column-gap: 40px;
+}
+@media screen and (max-width: 739px) {
+  /* line 47, source/tri/_single.scss */
+  #main > article .content .body {
+    -webkit-column-count: 1;
+    -moz-column-count: 1;
+    -ms-column-count: 1;
+    -o-column-count: 1;
+    column-count: 1;
+  }
+}
+
+/* line 2, source/tri/_calendar.scss */
+#main .event-calendar {
+  background: white;
+  padding: 25px;
+  margin-right: 10px;
+}
+/* line 7, source/tri/_calendar.scss */
+#main .event-calendar table {
+  width: 100%;
+}
+/* line 10, source/tri/_calendar.scss */
+#main .event-calendar table td {
+  width: 14.28571%;
+  height: 75px;
+  border: 1px solid #ccc;
+  vertical-align: top;
+  position: relative;
+  font-size: 0.8em;
+}
+/* line 18, source/tri/_calendar.scss */
+#main .event-calendar table td .day {
+  position: absolute;
+  padding: 5px;
+}
+/* line 22, source/tri/_calendar.scss */
+#main .event-calendar table td .event {
+  line-height: 0.8;
+}
+
+/* line 4, source/tri/_ribbon.scss */
+.ribbon span,
+.list .category span {
+  display: inline-block;
+  position: relative;
   background: #d92027;
   color: #fff;
   font-weight: bold;
+  letter-spacing: 1px;
   padding: 0 25px;
   font-size: 0.8em;
   line-height: 2em;
+  margin-left: -8px;
+  -webkit-border-radius: 2px 2px 2px 0;
+  -moz-border-radius: 2px 2px 2px 0;
+  -ms-border-radius: 2px 2px 2px 0;
+  -o-border-radius: 2px 2px 2px 0;
+  border-radius: 2px 2px 2px 0;
 }
-/* line 36, source/screen.scss */
-.category span:before {
+/* line 17, source/tri/_ribbon.scss */
+.ribbon span:before,
+.list .category span:before {
   content: '';
   display: block;
   position: absolute;
@@ -450,4 +691,20 @@ a {
   border-width: 8px 0 0 8px;
   border-style: solid;
   border-color: #801317 transparent transparent transparent;
+}
+
+/* line 31, source/tri/_ribbon.scss */
+.list .category {
+  position: relative;
+  display: block;
+}
+/* line 35, source/tri/_ribbon.scss */
+.list .category span {
+  position: absolute;
+  bottom: 0;
+}
+
+/* line 42, source/tri/_ribbon.scss */
+.list .ribbon span {
+  margin-top: 10px;
 }
