@@ -301,85 +301,111 @@ body {
 /* line 16, source/tri/_typography.scss */
 a {
   text-decoration: none;
+  color: #d92027;
 }
 
-/* line 19, source/tri/_typography.scss */
+/* line 20, source/tri/_typography.scss */
 a:hover {
   text-decoration: underline;
 }
 
-/* line 26, source/tri/_typography.scss */
+/* line 27, source/tri/_typography.scss */
 #container > header hgroup h2 {
   text-align: center;
   font-style: italic;
 }
 
-/* line 38, source/tri/_typography.scss */
+/* line 39, source/tri/_typography.scss */
 #main > article hgroup h1 {
   padding: 0 5px;
   font-size: 2.5em;
   letter-spacing: 1px;
   line-height: 1.4;
 }
-/* line 44, source/tri/_typography.scss */
+/* line 45, source/tri/_typography.scss */
 #main > article hgroup h2 {
   padding: 0 5px;
   line-height: 1.5;
 }
-/* line 48, source/tri/_typography.scss */
+/* line 49, source/tri/_typography.scss */
 #main > article hgroup .meta {
   padding: 0 5px;
   line-height: 1.5;
 }
 @media screen and (max-width: 479px) {
-  /* line 53, source/tri/_typography.scss */
+  /* line 54, source/tri/_typography.scss */
   #main > article hgroup h1 {
     font-size: 2em;
   }
-  /* line 56, source/tri/_typography.scss */
+  /* line 57, source/tri/_typography.scss */
   #main > article hgroup h2 {
     font-size: 1em;
   }
-  /* line 59, source/tri/_typography.scss */
+  /* line 60, source/tri/_typography.scss */
   #main > article hgroup .meta {
     font-size: 0.9em;
   }
 }
-/* line 67, source/tri/_typography.scss */
+/* line 68, source/tri/_typography.scss */
 #main > article .content p.lead {
   font-size: 1.3em;
   line-height: 1.5;
   margin-bottom: 2em;
 }
 @media screen and (max-width: 479px) {
-  /* line 67, source/tri/_typography.scss */
+  /* line 68, source/tri/_typography.scss */
   #main > article .content p.lead {
     font-size: 1.1em;
     line-height: 1.3;
     font-weight: bold;
   }
 }
-/* line 80, source/tri/_typography.scss */
+/* line 78, source/tri/_typography.scss */
+#main > article .content strong {
+  font-weight: bold;
+}
+/* line 84, source/tri/_typography.scss */
 #main > article .content .body h2 {
   font-weight: bold;
   font-size: 1.3em;
   line-height: 1.6;
 }
-/* line 85, source/tri/_typography.scss */
+/* line 89, source/tri/_typography.scss */
 #main > article .content .body h3 {
   font-weight: bold;
   font-size: 1.2em;
 }
-/* line 90, source/tri/_typography.scss */
+/* line 94, source/tri/_typography.scss */
 #main > article .content .body p {
   font-size: 1.1em;
   line-height: 1.45;
   margin-bottom: 1.5em;
 }
-/* line 101, source/tri/_typography.scss */
+/* line 105, source/tri/_typography.scss */
 #main .list article h1 {
   font-size: 1.5em;
   line-height: 1.2;
+}
+
+/* line 118, source/tri/_typography.scss */
+.about-author .body header h2 {
+  font-size: 1.2em;
+  font-weight: bold;
+}
+/* line 122, source/tri/_typography.scss */
+.about-author .body header p {
+  font-size: 1em;
+}
+@media screen and (max-width: 479px) {
+  /* line 130, source/tri/_typography.scss */
+  .about-author .body header h2 {
+    font-size: 1em;
+  }
+  /* line 134, source/tri/_typography.scss */
+  .about-author .body p {
+    font-size: 0.8em;
+    line-height: 1.3;
+  }
 }
 
 /* line 1, source/tri/_list.scss */
@@ -549,61 +575,205 @@ a:hover {
     display: none;
   }
 }
-/* line 2, source/tri/_single.scss */
+/* line 1, source/tri/_about-author.scss */
+.about-author {
+  position: relative;
+  background: #ebebeb;
+  overflow: hidden;
+  -webkit-box-shadow: black 0 25px 20px -25px inset, black 0 -25px 20px -25px inset;
+  -moz-box-shadow: black 0 25px 20px -25px inset, black 0 -25px 20px -25px inset;
+  box-shadow: black 0 25px 20px -25px inset, black 0 -25px 20px -25px inset;
+}
+/* line 7, source/tri/_about-author.scss */
+.about-author:before {
+  content: '';
+  display: block;
+  position: absolute;
+  z-index: 12;
+  pointer-events: none;
+  top: 0px;
+  left: 72px;
+  border-width: 8px 8px 0 8px;
+  border-style: solid;
+  border-color: #fff transparent transparent transparent;
+}
+/* line 20, source/tri/_about-author.scss */
+.about-author .wallpaper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0.5;
+  background-size: 75%;
+  background-position: -25% 50%;
+  -webkit-filter: blur(4px) grayscale(0.6);
+  -moz-filter: blur(4px) grayscale(0.6);
+  filter: blur(4px) grayscale(0.6);
+  background-repeat: no-repeat;
+  width: 720px;
+  height: 135px;
+  z-index: 10;
+}
+/* line 33, source/tri/_about-author.scss */
+.about-author .wallpaper:before {
+  display: block;
+  content: '';
+  width: 450px;
+  height: 135px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-image: -webkit-gradient(linear, 0% 50%, 100% 50%, color-stop(0%, rgba(235, 235, 235, 0)), color-stop(45%, #ebebeb));
+  background-image: -webkit-linear-gradient(left, rgba(235, 235, 235, 0), #ebebeb 45%);
+  background-image: -moz-linear-gradient(left, rgba(235, 235, 235, 0), #ebebeb 45%);
+  background-image: -o-linear-gradient(left, rgba(235, 235, 235, 0), #ebebeb 45%);
+  background-image: linear-gradient(left, rgba(235, 235, 235, 0), #ebebeb 45%);
+}
+/* line 44, source/tri/_about-author.scss */
+.about-author .body {
+  position: relative;
+  z-index: 11;
+  height: 110px;
+  padding: 15px 25px 10px;
+  text-shadow: #ebebeb 1px 1px 0;
+}
+/* line 51, source/tri/_about-author.scss */
+.about-author .body .author-avatar {
+  float: left;
+  display: block;
+  width: 100px;
+  height: 100px;
+  overflow: hidden;
+  background-size: 100%;
+  -webkit-border-radius: 100%;
+  -moz-border-radius: 100%;
+  -ms-border-radius: 100%;
+  -o-border-radius: 100%;
+  border-radius: 100%;
+  border: 4px solid #fff;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.9) 0 0 10px 2px;
+  -moz-box-shadow: rgba(0, 0, 0, 0.9) 0 0 10px 2px;
+  box-shadow: rgba(0, 0, 0, 0.9) 0 0 10px 2px;
+}
+/* line 62, source/tri/_about-author.scss */
+.about-author .body .author-avatar img {
+  display: none;
+}
+/* line 68, source/tri/_about-author.scss */
+.about-author .body header,
+.about-author .body p {
+  margin-left: 130px;
+}
+/* line 71, source/tri/_about-author.scss */
+.about-author .body header {
+  margin-top: 10px;
+}
+/* line 74, source/tri/_about-author.scss */
+.about-author .body p {
+  margin-top: 5px;
+}
+/* line 77, source/tri/_about-author.scss */
+.about-author .body p a:first-child {
+  font-weight: bold;
+}
+@media screen and (max-width: 479px) {
+  /* line 83, source/tri/_about-author.scss */
+  .about-author:before {
+    left: 44px;
+  }
+  /* line 86, source/tri/_about-author.scss */
+  .about-author .wallpaper {
+    height: 180px;
+  }
+  /* line 88, source/tri/_about-author.scss */
+  .about-author .wallpaper:before {
+    display: none;
+  }
+  /* line 92, source/tri/_about-author.scss */
+  .about-author .body {
+    height: 155px;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  /* line 97, source/tri/_about-author.scss */
+  .about-author .body .author-avatar {
+    width: 75px;
+    height: 75px;
+  }
+  /* line 103, source/tri/_about-author.scss */
+  .about-author .body header,
+  .about-author .body p {
+    margin-left: 100px;
+  }
+  /* line 106, source/tri/_about-author.scss */
+  .about-author .body header {
+    margin-top: 0;
+  }
+}
+
+/* line 4, source/tri/_single.scss */
 #main > article {
   background: white;
   margin-right: 10px;
-}
-/* line 6, source/tri/_single.scss */
-#main > article header {
-  position: relative;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.3) 5px 5px 10px;
+  -moz-box-shadow: rgba(0, 0, 0, 0.3) 5px 5px 10px;
+  box-shadow: rgba(0, 0, 0, 0.3) 5px 5px 10px;
 }
 /* line 9, source/tri/_single.scss */
-#main > article header hgroup {
+#main > article > header {
+  position: relative;
+}
+/* line 12, source/tri/_single.scss */
+#main > article > header hgroup {
   position: absolute;
   top: 15%;
   left: 25px;
 }
-/* line 14, source/tri/_single.scss */
-#main > article header hgroup h2 {
+@media screen and (max-width: 479px) {
+  /* line 12, source/tri/_single.scss */
+  #main > article > header hgroup {
+    left: 10px;
+  }
+}
+/* line 20, source/tri/_single.scss */
+#main > article > header hgroup h2 {
   display: inline-block;
   background: #000;
 }
-/* line 17, source/tri/_single.scss */
-#main > article header hgroup h2 a {
+/* line 23, source/tri/_single.scss */
+#main > article > header hgroup h2 a {
   color: #fff;
 }
-/* line 21, source/tri/_single.scss */
-#main > article header hgroup h1 {
+/* line 27, source/tri/_single.scss */
+#main > article > header hgroup h1 {
   display: inline;
   background: #d92027;
   color: #fff;
 }
-/* line 26, source/tri/_single.scss */
-#main > article header hgroup .meta {
+/* line 32, source/tri/_single.scss */
+#main > article > header hgroup .meta {
   display: inline-block;
   background: rgba(255, 255, 255, 0.6);
   margin-top: 2px;
 }
-/* line 30, source/tri/_single.scss */
-#main > article header hgroup .meta a {
+/* line 36, source/tri/_single.scss */
+#main > article > header hgroup .meta a {
   color: #000;
 }
-/* line 37, source/tri/_single.scss */
+/* line 43, source/tri/_single.scss */
 #main > article .picture {
   height: 200px;
 }
-/* line 41, source/tri/_single.scss */
+/* line 47, source/tri/_single.scss */
 #main > article .content {
   padding: 25px;
 }
 @media screen and (max-width: 479px) {
-  /* line 41, source/tri/_single.scss */
+  /* line 47, source/tri/_single.scss */
   #main > article .content {
     padding: 10px;
   }
 }
-/* line 47, source/tri/_single.scss */
+/* line 53, source/tri/_single.scss */
 #main > article .content .body {
   -webkit-column-count: 2;
   -moz-column-count: 2;
@@ -622,7 +792,7 @@ a:hover {
   column-gap: 40px;
 }
 @media screen and (max-width: 739px) {
-  /* line 47, source/tri/_single.scss */
+  /* line 53, source/tri/_single.scss */
   #main > article .content .body {
     -webkit-column-count: 1;
     -moz-column-count: 1;

@@ -1,15 +1,21 @@
+@import "about-author";
+
 #main {
 	> article {
 		background: $post-bg-color;
 		margin-right: $post-padding;
+		@include box-shadow(rgba(0,0,0, 0.3) 5px 5px 10px);
 		
-		header {
+		> header {
 			position: relative;
 			
 			hgroup {
 				position: absolute;
 				top: 15%;
 				left: 25px;
+				@media screen and (max-width: 479px) {
+					left: 10px;
+				}
 				
 				h2 {
 					display: inline-block;

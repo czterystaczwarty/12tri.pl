@@ -15,6 +15,7 @@ body {
 
 a {
 	text-decoration: none;
+	color: $tri-red;
 }
 a:hover {
 	text-decoration: underline;
@@ -74,6 +75,9 @@ a:hover {
 					font-weight: bold;
 				}
 			}
+			strong {
+				font-weight: bold;
+			}
 			
 			.body {
 				
@@ -104,6 +108,32 @@ a:hover {
 				a {
 					
 				}
+			}
+		}
+	}
+}
+.about-author {
+	.body {
+		header {
+			h2 {
+				font-size: 1.2em;
+				font-weight: bold;
+			}
+			p {
+				font-size: 1em;
+			}
+		}
+	}
+	@media screen and (max-width: 479px) {
+		.body {
+			header {
+				h2 {
+					font-size: 1em;
+				}
+			}
+			p {
+				font-size: 0.8em;
+				line-height: 1.3;
 			}
 		}
 	}
