@@ -1,0 +1,112 @@
+.about-author {
+	position: relative;
+	background: #ebebeb;
+	overflow: hidden;
+	@include box-shadow(black 0 25px 20px -25px inset, black 0 -25px 20px -25px inset);
+	
+	&:before {
+		content: '';
+		display: block;
+		position: absolute;
+		z-index: 12;
+		pointer-events: none;
+		top: 0px;
+		left: 72px;
+		border-width: 8px 8px 0 8px;
+		border-style: solid;
+		border-color: #fff transparent transparent transparent;
+	}
+	
+	.wallpaper {
+		position: absolute;
+		top: 0;
+		left: 0;
+		opacity: 0.5;
+		background-size: 75%;
+		background-position: -25% 50%;
+		@include filter(blur(4px) grayscale(0.6));
+		background-repeat: no-repeat;
+		width: $main-width;
+		height: 135px;
+		z-index: 10;
+		
+		&:before {
+			display: block;
+			content: '';
+			width: 450px;
+			height: 135px;
+			position: absolute;
+			top: 0;
+			right: 0;
+			@include background-image(linear-gradient(left, rgba(235, 235, 235, 0), rgba(235, 235, 235, 1) 45%));
+		}
+	}
+	.body {
+		position: relative;
+		z-index: 11;
+		height: 110px;
+		padding: 15px 25px 10px;
+		@include text-shadow(#ebebeb 1px 1px 0);
+		
+		.author-avatar {
+			float: left;
+			display: block;
+			width: 100px;
+			height: 100px;
+			overflow: hidden;
+			background-size: 100%;
+			@include border-radius(100%);
+			border: 4px solid #fff;
+			@include box-shadow(rgba(black, 0.9) 0 0 10px 2px);
+			
+			img {
+				display: none;
+			}
+		}
+		
+		header,
+		p {
+			margin-left: 130px;
+		}
+		header {
+			margin-top: 10px;
+		}
+		p {
+			margin-top: 5px;
+			
+			a:first-child {
+				font-weight: bold;
+			}
+		}
+	}
+	@media screen and (max-width: 479px) {
+		&:before {
+			left: 44px;
+		}
+		.wallpaper {
+			height: 180px;
+			&:before {
+				display: none;
+			}
+		}
+		.body {
+			height: 155px;
+			padding-left: $post-padding;
+			padding-right: $post-padding;
+			
+			.author-avatar {
+				width: 75px;
+				height: 75px;
+			}
+			
+			header,
+			p {
+				margin-left: 100px;
+			}
+			header {
+				margin-top: 0;
+			}
+		}
+	}
+	
+}

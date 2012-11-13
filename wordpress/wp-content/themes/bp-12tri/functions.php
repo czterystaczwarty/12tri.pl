@@ -24,7 +24,7 @@ if ( !function_exists( 'bp_dtheme_enqueue_styles' ) )
 	function bp_dtheme_enqueue_styles()
 	{
 		$version = '20111109';
-		wp_register_style( 'bp-12tri', get_stylesheet_directory_uri() . '/style.css', array(), $version );
+		wp_register_style( 'bp-12tri', get_stylesheet_directory_uri() . '/styles/style.css', array(), $version );
 		wp_enqueue_style( 'bp-12tri' );
 	}
 	add_action('wp_head', 'bp_dtheme_enqueue_styles', 1);

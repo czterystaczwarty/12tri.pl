@@ -1,0 +1,73 @@
+html {
+	height: 100%;
+}
+
+body {
+	background: $bg-color;
+}
+
+#container {
+	margin: 0 auto;
+	width: $container-width;
+
+	> header {
+		position: fixed;
+		width: $left-container-width - $post-gap;
+		height: 100%;
+		padding: 20px 0 50px;
+$post-bg-color: #fff;
+		background: $post-bg-color;
+		@include box-shadow(rgba(0,0,0, 0.3) 5px 5px 10px);
+
+		hgroup {
+			h1 a {
+				display: block;
+				height: 162px;
+				@include replace-text('logo.png');
+			}
+		}
+		nav {
+			ul {
+				display: block;
+			}
+			#pull {
+				display: none;
+			}
+		}
+	}
+
+	footer {
+		clear: both;
+	}
+}
+
+
+
+#main {
+	margin-left: $left-container-width;
+	width: $main-width;
+
+	> header {
+		padding: 10px;
+		background: #eee;
+		margin: 0 $post-gap $post-gap 0;
+		@include box-shadow(rgba(0,0,0, 0.3) 5px 5px 10px);
+	}
+	
+}
+
+article {
+	> header {
+		.picture {
+			display: block;
+			height: 150px;
+			background-repeat: no-repeat;
+			background-position: 50% 50%;
+			background-size: 100%;
+			
+			img {
+				display: none;
+			}
+		}
+	}
+}

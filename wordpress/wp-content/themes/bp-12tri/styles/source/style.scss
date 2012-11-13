@@ -1,0 +1,25 @@
+@import "compass/reset";
+@import "compass/typography/text/replacement";
+@import "compass/utilities/general/clearfix";
+@import "compass/css3/images";
+@import "compass/css3/box-shadow";
+@import "compass/css3";
+@import "compass/css3/border-radius";
+@import "compass/css3/transition";
+@import "compass/css3/columns";
+@import "compass/css3/filter";
+
+// config
+@import "tri/variables";
+
+// TODO: only layout responsive, fonts, size, images -> post, even, typo
+@import "tri/desktop";
+@import "tri/tablet";
+@import "tri/smartphone";
+
+@import "tri/typography";
+@import "tri/list";
+@import "tri/single";
+@import "tri/calendar";
+
+@import "tri/ribbon";

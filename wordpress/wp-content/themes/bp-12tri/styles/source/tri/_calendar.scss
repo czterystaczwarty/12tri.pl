@@ -1,0 +1,28 @@
+#main {
+	.event-calendar {
+		background: $post-bg-color;
+		padding: 25px;
+		margin-right: $post-padding;
+		
+		table {
+			width: 100%;
+			
+			td {
+				width: (100%/7);
+				height: 75px;
+				border: 1px solid #ccc;
+				vertical-align: top;
+				position: relative;
+				font-size: 0.8em;
+				
+				.day{
+					position: absolute;
+					padding: 5px;
+				}
+				.event {
+					line-height: 0.8;
+				}
+			}
+		}
+	}
+}

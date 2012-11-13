@@ -1,0 +1,24 @@
+$container-width: 960px;
+$bg-color: #ddd;
+
+$link-color: #d92027;
+
+$tri-red: #d92027;
+$tri-dark-red: #801317;
+$tri-green: #44b649;
+$tri-dark-green: #2f8033;
+$tri-blue: #2084c6;
+$tri-dark-blue: #145580;
+
+$left-container-width: 240px;
+
+$column-width: 240px;
+$columns: 3;
+$main-width: $column-width * $columns;
+
+$post-bg-color: #fff;
+$post-footer-color: #888;
+$post-gap: 10px;
+$post-padding: 10px;
+
+$minus: $post-gap + (2 * $post-padding);
