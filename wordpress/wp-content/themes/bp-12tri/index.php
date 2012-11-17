@@ -10,6 +10,7 @@
 		<?php $boxes = tri_random_boxes_positions ($wp_query->post_count) ?>
 		<?php if ( have_posts() ) : ?>
 			<?php while (have_posts()) : the_post(); ?>
+				<?php //TODO: do_action('before_post'); ?>
 				<?php tri_get_box ($boxes, $wp_query->current_post) ?>
 				<article id="entry-<?php the_ID(); ?>" <?php post_class(); ?>>
 					<header>

@@ -8,21 +8,18 @@ define('EVENTS_BOX_RANGE_STOP',	5);
 if (!is_admin())
 	define( 'BP_DISABLE_ADMIN_BAR', true );
 
-remove_action('wp_head',		'rsd_link');
-remove_action('wp_head',		'wlwmanifest_link');
-remove_action('wp_head',		'wp_generator');
-remove_action('wp_head',		'start_post_rel_link');
-remove_action('wp_head',		'index_rel_link');
-remove_action('wp_head',		'adjacent_posts_rel_link');
+$head_scripts = array(
+	'modernizr'		=> 'libs/modernizr-2.6.1.js',
+);
+$footer_scripts = array(
+	'jquery'			=> 'libs/jquery-1.8.2.js',
+	'jquery.mansonry'	=> 'libs/jquery.masonry.min.js',
+	'fb_api'			=> 'libs/fb_api.js',
+	'scripts.js'		=> 'script.js'
+);
 
-// move sctipts to footer
-remove_action('wp_head',		'wp_print_scripts');
-remove_action('wp_head',		'wp_print_head_scripts');
-remove_action('wp_head',		'wp_enqueue_scripts');
+// remove unused head entries
 
-add_action('wp_footer',			'wp_enqueue_scripts',		5);
-add_action('wp_footer',			'wp_print_scripts',			6);
-add_action('wp_footer',			'wp_print_head_scripts', 	6);
 
 // override BP styles
 if ( !function_exists( 'bp_dtheme_enqueue_styles' ) )
