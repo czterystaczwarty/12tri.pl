@@ -82,7 +82,7 @@ body {
   text-indent: -119988px;
   overflow: hidden;
   text-align: left;
-  background-image: url('../images/logo.png?1352843406');
+  background-image: url('logo.png?1352843406');
   background-repeat: no-repeat;
   background-position: 50% 50%;
 }
@@ -373,10 +373,10 @@ a:hover {
   -moz-box-shadow: rgba(0, 0, 0, 0.5) 3px 3px 10px;
   box-shadow: rgba(0, 0, 0, 0.5) 3px 3px 10px;
 }
-.list article.double {
+.list article.double, .list article.tag-double {
   width: 470px;
 }
-.list article.triple {
+.list article.triple, .list article.tag-triple {
   width: 710px;
 }
 .list article.fb-fanpage {
@@ -458,17 +458,20 @@ a:hover {
     float: none;
     position: static;
   }
-  .list article, .list article.double, .list article.triple {
+  .list article, .list article.double, .list article.tag-double
+  .list article.triple, .list article.tag-triple {
     width: auto;
     margin-right: 0;
     -webkit-box-shadow: rgba(0, 0, 0, 0.6) 0px 5px 7px;
     -moz-box-shadow: rgba(0, 0, 0, 0.6) 0px 5px 7px;
     box-shadow: rgba(0, 0, 0, 0.6) 0px 5px 7px;
   }
-  .list article .content, .list article.double .content, .list article.triple .content {
+  .list article .content, .list article.double .content, .list article.tag-double
+  .list article.triple .content, .list article.tag-triple .content {
     font-size: .95em;
   }
-  .list article .content .more, .list article.double .content .more, .list article.triple .content .more {
+  .list article .content .more, .list article.double .content .more, .list article.tag-double
+  .list article.triple .content .more, .list article.tag-triple .content .more {
     display: block;
     color: #fff;
     background: #d92027;
@@ -476,7 +479,8 @@ a:hover {
     text-align: center;
     line-height: 25px;
   }
-  .list article footer, .list article.double footer, .list article.triple footer {
+  .list article footer, .list article.double footer, .list article.tag-double
+  .list article.triple footer, .list article.tag-triple footer {
     display: none;
   }
 }

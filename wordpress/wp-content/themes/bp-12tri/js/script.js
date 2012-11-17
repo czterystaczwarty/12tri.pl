@@ -41,8 +41,8 @@
 		initMansonry = function () {
 			var $container = $('.list'),
 				items = 'article',
-				$triples	= $container.children('.triple'),
-				$doubles	= $container.children('.double'),
+				$triples	= $container.children('.triple, .tag-triple'),
+				$doubles	= $container.children('.double, .tag-double'),
 				$singles	= $container.children().not($triples).not($doubles),
 				
 				mansonry_config = {
