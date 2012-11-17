@@ -1,6 +1,8 @@
 <?php
 
 define('TITLE_SEPARATOR', ' - ');
+if (!is_admin())
+	define( 'BP_DISABLE_ADMIN_BAR', true );
 
 remove_action('wp_head', 'rsd_link');
 remove_action('wp_head', 'wlwmanifest_link');
@@ -56,6 +58,11 @@ function tri_the_title ()
 		echo $site_name . TITLE_SEPARATOR . $site_description;
 	else
 		echo $site_name;
+}
+
+function tri_the_date ()
+{
+	printf('%sT%s+01:00', get_the_date('Y-m-d'), get_the_date('G:i'));
 }
 
 function the_first_category ()

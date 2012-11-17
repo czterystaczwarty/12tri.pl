@@ -18,11 +18,12 @@
 							<a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
 						</h1>
 					</header>
-					</header><div class="content">
+					<div class="content">
 						<?php the_content(__( 'Read more', '12tri' )) ?>
 					</div>
 					<footer>
-						<abbr class="published" title="2012-10-10T14:07:00-07:00"><!-- YYYYMMDDThh:mm:ss+ZZZZ -->10 październik 2012</abbr> <address class="vcard author">przez <a class="url fn" href="#">Michał Rachwał</a></address>
+						<time datetime="<?php tri_the_date() ?>" pubdate><?php the_date() ?></time>
+						<address class="vcard author"><?php _e('by', 'tri') ?> <a class="url fn" href="<?php echo bp_core_get_user_domain($post->post_author) ?>"><?php echo bp_core_get_user_displayname($post->post_author) ?></a></address>
 					</footer>
 				</article>
 			<?php endwhile; ?>
