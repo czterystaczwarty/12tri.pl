@@ -8,26 +8,20 @@ define('EVENTS_BOX_RANGE_STOP',	5);
 if (!is_admin())
 	define( 'BP_DISABLE_ADMIN_BAR', true );
 
-$head_scripts = array(
-	'modernizr'		=> 'libs/modernizr-2.6.1.js',
-);
-$footer_scripts = array(
-	'jquery'			=> 'libs/jquery-1.8.2.js',
-	'jquery.mansonry'	=> 'libs/jquery.masonry.min.js',
-	'fb_api'			=> 'libs/fb_api.js',
-	'scripts.js'		=> 'script.js'
-);
-
-// remove unused head entries
-
+wp_enqueue_script('modernizr', get_stylesheet_directory_uri() . '/js/libs/modernizr-2.6.1.js', false, false, false);
+wp_deregister_script( 'jquery' );
+wp_enqueue_script( 'jquery', 'http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js', false, false, true);
+wp_enqueue_script('fb_api', get_stylesheet_directory_uri() . '/js/libs/fb_api.js', false, false, true);
+wp_enqueue_script('jquery.mansonry', get_stylesheet_directory_uri() . '/js/libs/jquery.masonry.min.js', array('jquery'), false, true);
+wp_enqueue_script('user_scripts', get_stylesheet_directory_uri() . '/js/script.js', array('jquery', 'jquery.mansonry'), false, true);
 
 // override BP styles
 if ( !function_exists( 'bp_dtheme_enqueue_styles' ) )
 {
 	function bp_dtheme_enqueue_styles()
 	{
-		$version = '20111109';
-		wp_register_style( 'bp-12tri', get_stylesheet_directory_uri() . '/styles/style.css', array(), $version );
+		// $version = '20111109';
+		wp_register_style( 'bp-12tri', get_stylesheet_directory_uri() . '/styles/style.css');
 		wp_enqueue_style( 'bp-12tri' );
 	}
 	add_action('wp_head', 'bp_dtheme_enqueue_styles', 1);

@@ -1,4 +1,6 @@
-$(function(){
+jQuery(function(){
+	
+	$ = jQuery;
 
 	var $pull = $('#pull'),
 		$menu = $('nav ul'),
