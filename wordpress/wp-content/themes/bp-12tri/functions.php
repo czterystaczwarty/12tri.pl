@@ -1,28 +1,28 @@
 <?php
 
-define('TITLE_SEPARATOR', ' - ');
-define('BOXES_RANGE_START', 1);
-define('FB_BOX_RANGE_STOP', 5);
-define('EVENTS_BOX_RANGE_STOP', 5);
+define('TITLE_SEPARATOR',		' - ');
+define('BOXES_RANGE_START',		1);
+define('FB_BOX_RANGE_STOP',		5);
+define('EVENTS_BOX_RANGE_STOP',	5);
 
 if (!is_admin())
 	define( 'BP_DISABLE_ADMIN_BAR', true );
 
-remove_action('wp_head', 'rsd_link');
-remove_action('wp_head', 'wlwmanifest_link');
-remove_action('wp_head', 'wp_generator');
-remove_action('wp_head', 'start_post_rel_link');
-remove_action('wp_head', 'index_rel_link');
-remove_action('wp_head', 'adjacent_posts_rel_link');
+remove_action('wp_head',		'rsd_link');
+remove_action('wp_head',		'wlwmanifest_link');
+remove_action('wp_head',		'wp_generator');
+remove_action('wp_head',		'start_post_rel_link');
+remove_action('wp_head',		'index_rel_link');
+remove_action('wp_head',		'adjacent_posts_rel_link');
 
 // move sctipts to footer
-remove_action('wp_head', 'wp_print_scripts');
-remove_action('wp_head', 'wp_print_head_scripts', 9);
-remove_action('wp_head', 'wp_enqueue_scripts', 1);
+remove_action('wp_head',		'wp_print_scripts');
+remove_action('wp_head',		'wp_print_head_scripts');
+remove_action('wp_head',		'wp_enqueue_scripts');
 
-add_action('wp_footer', 'wp_enqueue_scripts', 5);
-add_action('wp_footer', 'wp_print_scripts', 6);
-add_action('wp_footer', 'wp_print_head_scripts', 6);
+add_action('wp_footer',			'wp_enqueue_scripts',		5);
+add_action('wp_footer',			'wp_print_scripts',			6);
+add_action('wp_footer',			'wp_print_head_scripts', 	6);
 
 // override BP styles
 if ( !function_exists( 'bp_dtheme_enqueue_styles' ) )
