@@ -6,8 +6,11 @@
 	</header>
 
 	<section class="posts list">
+		
+		<?php $boxes = tri_random_boxes_positions ($wp_query->post_count) ?>
 		<?php if ( have_posts() ) : ?>
 			<?php while (have_posts()) : the_post(); ?>
+				<?php tri_get_box ($boxes, $wp_query->current_post) ?>
 				<article id="entry-<?php the_ID(); ?>" <?php post_class(); ?>>
 					<header>
 						<a href="<?php the_permalink(); ?>" class="picture" style="background-image: url(images/zdjecie10.jpg);">

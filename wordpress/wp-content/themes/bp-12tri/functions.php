@@ -1,6 +1,10 @@
 <?php
 
 define('TITLE_SEPARATOR', ' - ');
+define('BOXES_RANGE_START', 1);
+define('FB_BOX_RANGE_STOP', 5);
+define('EVENTS_BOX_RANGE_STOP', 5);
+
 if (!is_admin())
 	define( 'BP_DISABLE_ADMIN_BAR', true );
 
@@ -63,6 +67,25 @@ function tri_the_title ()
 function tri_the_date ()
 {
 	printf('%sT%s+01:00', get_the_date('Y-m-d'), get_the_date('G:i'));
+}
+
+function tri_random_boxes_positions ($loop_count)
+{
+	$last = --$loop_count;
+	$boxes = array();
+	$boxes['fb'] = rand(BOXES_RANGE_START, FB_BOX_RANGE_STOP < $last ? FB_BOX_RANGE_STOP : $last);
+	$boxes['events'] = rand(BOXES_RANGE_START, EVENTS_BOX_RANGE_STOP < $last ? EVENTS_BOX_RANGE_STOP : $last);
+	
+	return $boxes;
+}
+
+function tri_get_box ($boxes, $curr_position)
+{
+	foreach ($boxes as $box_name => $position)
+	{
+		if ($position == $curr_position)
+			get_template_part('box', $box_name);
+	}
 }
 
 function the_first_category ()
