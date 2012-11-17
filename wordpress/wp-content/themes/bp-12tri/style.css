@@ -8,8 +8,3 @@ Author URI: hhttps://www.facebook.com/tomasz.szopinski
 Template: bp-default
 Tags: buddypress, responsive
 */
-
-/* TODO: temp styles -> should be done with Compass (SASS) */
-body {
-	margin: 10px;
-}
