@@ -26,14 +26,6 @@
 					'container'	=> false,
 					'menu'		=> 'main'
 				)); ?>
-				<!-- <ul>
-					<li id="home"><a href="#">Główna</a></li>
-					<li id="about"><a href="#">O nas</a></li>
-					<li id="trainings"><a href="#">Treningi</a></li>
-					<li id="training-camps"><a href="#">Obozy biegowe </a></li>
-					<li id="events"><a href="#">Wydarzenia</a></li>
-					<li id="contact"><a href="#">Kontakt</a></li>
-				</ul> -->
 				 <a href="#" id="pull">Menu</a>
 			</nav>
 		</header>

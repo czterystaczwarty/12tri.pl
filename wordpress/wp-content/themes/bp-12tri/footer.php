@@ -8,7 +8,6 @@
 	<div id="fb-root"></div>
 	<?php // TODO: mobe to separete *.js ?>
 	<?php do_action( 'bp_after_footer' ); ?>
-	<? //TODO: customize wp_footer ?>
 	<?php wp_footer(); ?>
 </body>
 </html>
