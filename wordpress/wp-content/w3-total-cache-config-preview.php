@@ -148,10 +148,22 @@ return array(
 	'minify.js.engine' => 'js',
 	'minify.js.combine.header' => false,
 	'minify.js.combine.body' => false,
-	'minify.js.combine.footer' => false,
+	'minify.js.combine.footer' => true,
 	'minify.js.strip.comments' => false,
 	'minify.js.strip.crlf' => false,
 	'minify.js.groups' => array(
+		'30e2e' => array(
+			'default' => array(
+				'include-footer' => array(
+					'blocking' => true,
+					'files' => array(
+						0 => 'wp-content/themes/bp-12tri/js/libs/fb_api.js',
+						1 => 'wp-content/themes/bp-12tri/js/libs/jquery.masonry.min.js',
+						2 => 'wp-content/themes/bp-12tri/js/script.js',
+					),
+				),
+			),
+		),
 	),
 	'minify.yuijs.path.java' => 'java',
 	'minify.yuijs.path.jar' => 'yuicompressor.jar',
@@ -512,7 +524,7 @@ return array(
 	'notes.cdn_upload' => false,
 	'notes.cdn_reupload' => false,
 	'notes.need_empty_pgcache' => true,
-	'notes.need_empty_minify' => false,
+	'notes.need_empty_minify' => true,
 	'notes.need_empty_objectcache' => false,
 	'notes.pgcache_rules_core' => true,
 	'notes.pgcache_rules_cache' => true,
