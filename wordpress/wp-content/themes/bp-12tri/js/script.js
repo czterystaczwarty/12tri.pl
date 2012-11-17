@@ -1,6 +1,4 @@
-jQuery(function(){
-	
-	$ = jQuery;
+(function($){
 
 	var $pull = $('#pull'),
 		$menu = $('nav ul'),
@@ -84,4 +82,4 @@ jQuery(function(){
 	init();
 	$window.on('resize', update);
 
-});
+})(jQuery);
