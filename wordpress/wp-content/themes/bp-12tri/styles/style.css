@@ -715,11 +715,15 @@ a:hover {
   font-size: 0.8em;
   line-height: 2em;
   margin-left: -8px;
+  margin-top: 10px;
   -webkit-border-radius: 2px 2px 2px 0;
   -moz-border-radius: 2px 2px 2px 0;
   -ms-border-radius: 2px 2px 2px 0;
   -o-border-radius: 2px 2px 2px 0;
   border-radius: 2px 2px 2px 0;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.5) 1px 1px 3px;
+  -moz-box-shadow: rgba(0, 0, 0, 0.5) 1px 1px 3px;
+  box-shadow: rgba(0, 0, 0, 0.5) 1px 1px 3px;
 }
 .ribbon span:before,
 .list .category span:before {
@@ -733,15 +737,12 @@ a:hover {
   border-color: #801317 transparent transparent transparent;
 }
 
-.list .category {
+.list .post-image .category {
   position: relative;
   display: block;
 }
-.list .category span {
+.list .post-image .category span {
   position: absolute;
   bottom: 0;
-}
-
-.list .ribbon span {
-  margin-top: 10px;
+  margin-top: 0;
 }

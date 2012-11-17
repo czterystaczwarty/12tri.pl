@@ -12,7 +12,9 @@
 		font-size: 0.8em;
 		line-height: 2em;
 		margin-left: -8px;
+		margin-top: $post-padding;
 		@include border-radius(2px 2px 2px 0);
+		@include box-shadow(rgba(0,0,0, 0.5) 1px 1px 3px);
 		
 		&:before {
 			content: '';
@@ -28,18 +30,13 @@
 }
 
 
-.list .category {
+.list .post-image .category {
 	position: relative;
 	display: block;
 	
 	span {
 		position: absolute;
 		bottom: 0;
-	}
-}
-
-.list .ribbon {
-	span {
-		margin-top: $post-padding;
+		margin-top: 0;
 	}
 }

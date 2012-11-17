@@ -10,13 +10,15 @@
 		<?php $boxes = tri_random_boxes_positions ($wp_query->post_count) ?>
 		<?php if ( have_posts() ) : ?>
 			<?php while (have_posts()) : the_post(); ?>
-				<?php //TODO: do_action('before_post'); ?>
 				<?php tri_get_box ($boxes, $wp_query->current_post) ?>
-				<article id="entry-<?php the_ID(); ?>" <?php post_class(); ?>>
+				<?php $post_image = tri_has_post_image($post->ID) ? tri_post_image($post->ID) : null ?>
+				<article id="entry-<?php the_ID(); ?>" <?php post_class( $post_image ? 'post-image' : false ); ?>>
 					<header>
-						<a href="<?php the_permalink(); ?>" class="picture" style="background-image: url(images/zdjecie10.jpg);">
-							<img src="images/zdjecie10.jpg" alt="">
-						</a>
+						<?php if ($post_image): ?>
+							<a href="<?php the_permalink(); ?>" class="picture" style="background-image: url(<?php echo $post_image ?>);">
+								<img src="<?php echo $post_image ?>" alt="">
+							</a>
+						<?php endif; ?>
 						<span class="category"><span><?php the_first_category() ?></span></span>
 						<h1 class="title">
 							<a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>

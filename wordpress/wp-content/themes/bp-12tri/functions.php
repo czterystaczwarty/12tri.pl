@@ -103,4 +103,15 @@ function the_first_category ()
 		echo $category[0]->name;
 }
 
+function tri_has_post_image ($post_id)
+{
+	return has_post_thumbnail($post_id);
+}
+
+function tri_post_image ($post_id)
+{
+	$post_image = wp_get_attachment_image_src( get_post_thumbnail_id( $post_id ), 'single-post-thumbnail' );
+	return $post_image[0];
+}
+
 ?>
