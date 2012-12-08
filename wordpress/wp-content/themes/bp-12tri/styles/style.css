@@ -801,11 +801,13 @@ a:hover {
   border-color: #801317 transparent transparent transparent;
 }
 
-.list .post-image .category {
+.list .post-image .category,
+.list .event-map .category {
   position: relative;
   display: block;
 }
-.list .post-image .category span {
+.list .post-image .category span,
+.list .event-map .category span {
   position: absolute;
   bottom: 0;
   margin-top: 0;
