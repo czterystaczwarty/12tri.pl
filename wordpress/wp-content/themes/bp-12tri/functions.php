@@ -1,9 +1,10 @@
 <?php
 
 define('TITLE_SEPARATOR',		' - ');
-define('BOXES_RANGE_START',		1);
+define('BOXES_RANGE_START',		0);
 define('FB_BOX_RANGE_STOP',		5);
 define('EVENTS_BOX_RANGE_STOP',	5);
+define('EVENT_BOX_RANGE_STOP',	5);
 
 if (!is_admin())
 	define( 'BP_DISABLE_ADMIN_BAR', true );
@@ -13,6 +14,7 @@ function tri_scripts ()
 	wp_enqueue_script('modernizr', get_stylesheet_directory_uri() . '/js/libs/modernizr-2.6.1.js', false, null, false);
 	wp_deregister_script( 'jquery' );
 	wp_enqueue_script( 'jquery', 'http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js', false, null, true);
+	wp_enqueue_script( 'leafletjs', 'http://cdn.leafletjs.com/leaflet-0.4/leaflet.js');
 	wp_enqueue_script('fb_api', get_stylesheet_directory_uri() . '/js/libs/fb_api.js', false, null, true);
 	wp_enqueue_script('jquery.mansonry', get_stylesheet_directory_uri() . '/js/libs/jquery.masonry.min.js', array('jquery'), null, true);
 	wp_enqueue_script('user_scripts', get_stylesheet_directory_uri() . '/js/script.js', array('jquery', 'jquery.mansonry'), null, true);
@@ -40,6 +42,7 @@ if ( !function_exists( 'bp_dtheme_enqueue_styles' ) )
 		// $version = '20111109';
 		wp_register_style( 'bp-12tri', get_stylesheet_directory_uri() . '/styles/style.css');
 		wp_enqueue_style( 'bp-12tri' );
+		wp_enqueue_style( 'leafletjs', 'http://cdn.leafletjs.com/leaflet-0.4/leaflet.css' );
 	}
 	add_action('wp_head', 'bp_dtheme_enqueue_styles', 1);
 }
@@ -83,6 +86,7 @@ function tri_random_boxes_positions ($loop_count)
 	$boxes = array();
 	$boxes['fb'] = rand(BOXES_RANGE_START, FB_BOX_RANGE_STOP < $last ? FB_BOX_RANGE_STOP : $last);
 	$boxes['events'] = rand(BOXES_RANGE_START, EVENTS_BOX_RANGE_STOP < $last ? EVENTS_BOX_RANGE_STOP : $last);
+	$boxes['event'] = rand(BOXES_RANGE_START, EVENT_BOX_RANGE_STOP < $last ? EVENT_BOX_RANGE_STOP : $last);
 	
 	return $boxes;
 }
