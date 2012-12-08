@@ -12,13 +12,15 @@
 // config
 @import "tri/variables";
 
-// TODO: only layout responsive, fonts, size, images -> post, even, typo
+@import "tri/ui";
+
 @import "tri/desktop";
 @import "tri/tablet";
 @import "tri/smartphone";
 
 @import "tri/typography";
 @import "tri/list";
+@import "tri/event-box";
 @import "tri/single";
 @import "tri/calendar";
 
